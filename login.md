@@ -8,6 +8,12 @@ Besides terminals, we can take advantage of terminal multiplexers. We use [tmux]
 
 log in to your virtual machine with `ssh pulsys@sandbox-<yournetid>.lib.princeton.edu`
 
+Clone this repository by typing the following:
+
+```bash
+git clone https://github.com/pulibrary/command_line_curriculum.git
+```
+
 ## Prompt
 
 ![login_window](images/login_window.png)
