@@ -2,7 +2,7 @@
 
 Shell is a term for graphical or text-based interfaces that we use to interact with operating systems. They are programs that provide a form of input and output to control computers. We often use a graphical user interface and thus a graphical shell. When we open a command-line window, also called terminal, a text-based shell is started for us in that window. Using this shell, we can control the computer by issuing text commands. Modern terminals work as terminal emulators, emulating text-based environments in a graphical interface.
 
-There are several text-based shells that we can use, but the most common and useful to know is *Bourne Again SHell*, known as [Bash](https://www.gnu.org/software/bash/). It is the shell commonly associated with all the Virtual Machines developers will use at PUL. Another popular shell is [Z shell](https://zsh.sourceforge.io/) (Zsh), now the default shell on macOS. [fish shell](https://fishshell.com/) is also gaining popularity, being designed to be a user-friendly shell with good defaults. However, it is less compatible with the other mentioned shells. Windows operating system also has its shell called *PowerShell*.
+There are several text-based shells that we can use, but the one used at PUL is *Bourne Again SHell*, known as [Bash](https://www.gnu.org/software/bash/). It is the shell commonly associated with all the Virtual Machines developers will use at PUL. Another popular shell is [Z shell](https://zsh.sourceforge.io/) (Zsh), now the default shell on macOS. [fish shell](https://fishshell.com/) is also gaining popularity, being designed to be a user-friendly shell with good defaults. However, it is less compatible with the other mentioned shells. Windows operating system also has its shell called *PowerShell*.
 
 Besides terminals, we can take advantage of terminal multiplexers. We use [tmux](https://github.com/tmux/tmux/wiki) to open multiple shells in one window or screen. Terminal multiplexers can also detach and reattach a shell session which can be helpful in controlling remote processes.
 
@@ -12,7 +12,7 @@ log in to your virtual machine with `ssh pulsys@sandbox-<yournetid>.lib.princeto
 
 ![login_window](images/login_window.png)
 
-Opening a terminal will start a new shell session. We are then given access to a command line to execute commands. The beginning of the command line before the cursor is known as the command prompt (the [`pulsys@sandbox-tw8766 ~`]\$ in the picture).
+Opening a terminal will start a new shell session. We are then given access to a command line to execute commands. The beginning of the command line before the cursor is known as the command prompt (the [`pulsys@sandbox-tw8766 ~$`] in the picture).
 Typically, the following is displayed:
   * The user name of the user running the shell. The user affects all executed commands, as they will be run within this user’s permissions.
   * The name or an IP address of the computer where commands will be executed
