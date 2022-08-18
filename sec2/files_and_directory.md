@@ -72,6 +72,13 @@ Some of the most useful ones are:
 * `-g`: Shows what group owns the file (we will see `chmod` later for more details)
 *  `-a`: Shows hidden files in addition to regular files.
 
+Just like `bat` before there is a modern replacement for `ls` called `exa` which adds Extended attributes, git and tree (more below on this) support as it's features. It can be [installed](https://the.exa.website/) on our Ubuntu VM with 
+
+```bash
+sudo apt -y install exa
+```
+
+
 #### cat more or less: Show file contents
 
 The `cat`, `more` and `less` commands can be used to show the contents of a file on your terminal screen. To show the contents of the `/etc/fstab` file you can do any one of the following:
