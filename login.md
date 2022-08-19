@@ -8,6 +8,31 @@ Besides terminals, we can take advantage of terminal multiplexers. We use [tmux]
 
 log in to your virtual machine with `ssh pulsys@sandbox-<yournetid>.lib.princeton.edu`
 
+Clone this repository by typing the following:
+
+```bash
+git clone https://github.com/pulibrary/command_line_curriculum.git
+```
+
+If you get an error like this below:
+
+```bash
+pulsys@sandbox-fkayiwa:~$ git clone https://github.com/pulibrary/command_line_curriculum.git
+-bash: git: command not found
+```
+It means that the `git` client is not installed. Fix that with the following (we will explain what happened as you progress):
+
+```bash
+pulsys@sandbox-fkayiwa:~$ sudo apt -y install git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  git-man liberror-perl patch
+...
+...
+```
+
 ## Prompt
 
 ![login_window](images/login_window.png)
