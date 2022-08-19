@@ -58,6 +58,75 @@ List information about the FILEs (the current directory by default).
 Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
 ...
 ```
+The `ls` (list) command is used to show directories and
+files. It is similar to the DIR command in Windows Command Prompt.
+
+```bash
+pulsys@sandbox-fkayiwa:~/command_line_curriculum$ ls
+environment.md  images  LICENSE  login.md  plan.md  README.md
+```
+
+To see a more detailed listing of the files and directories, you can use
+the ls -l command, as shown below:
+
+```bash
+pulsys@sandbox-fkayiwa:~/command_line_curriculum$ ls -l
+total 36
+-rw-rw-r-- 1 pulsys pulsys 4903 Aug 19 12:12 environment.md
+drwxrwxr-x 2 pulsys pulsys 4096 Aug 19 12:12 images
+-rw-rw-r-- 1 pulsys pulsys 1536 Aug 19 12:12 LICENSE
+-rw-rw-r-- 1 pulsys pulsys 8799 Aug 19 12:12 login.md
+-rw-rw-r-- 1 pulsys pulsys 1366 Aug 19 12:12 plan.md
+-rw-rw-r-- 1 pulsys pulsys 1349 Aug 19 12:12 README.md
+```
+
+From left to right, you see file permissions, owner, group, size, last
+modified date, and finally the file or directory name. File permissions
+are beyond the scope of this intro to the CLI, but as you continue your CLI Linux
+education we will visit them. 
+
+In Windows, a file is hidden by setting a file attribute (metadata) on
+the file. In Linux, a file is hidden if its name starts with a period, or
+dot. To show these dot files, you use the `ls -a` command shown below:
+
+```bash
+pulsys@sandbox-fkayiwa:~/command_line_curriculum$ ls -a
+.  ..  environment.md  .git  .gitignore  images  LICENSE  login.md  plan.md  README.md
+```
+
+On the left you see . and .., which mean *current directory* and *parent directory*, respectively, just as in Windows. You also see
+previously hidden files such as .gitignore and the .git directory
+
+Finally, you can combine parameters. If you want to see a detailed
+listing (-l) of all files (-a), recursively descending into every
+child directory (-R), you simply combine them all (ls -alR), as
+shown below:
+
+```bash
+pulsys@sandbox-fkayiwa:~/command_line_curriculum$ ls -alR
+.:
+total 52
+drwxrwxr-x 4 pulsys pulsys 4096 Aug 19 12:12 .
+drwxr-xr-x 7 pulsys pulsys 4096 Aug 19 12:12 ..
+-rw-rw-r-- 1 pulsys pulsys 4903 Aug 19 12:12 environment.md
+drwxrwxr-x 8 pulsys pulsys 4096 Aug 19 12:12 .git
+-rw-rw-r-- 1 pulsys pulsys   26 Aug 19 12:12 .gitignore
+drwxrwxr-x 2 pulsys pulsys 4096 Aug 19 12:12 images
+-rw-rw-r-- 1 pulsys pulsys 1536 Aug 19 12:12 LICENSE
+-rw-rw-r-- 1 pulsys pulsys 8799 Aug 19 12:12 login.md
+-rw-rw-r-- 1 pulsys pulsys 1366 Aug 19 12:12 plan.md
+-rw-rw-r-- 1 pulsys pulsys 1349 Aug 19 12:12 README.md
+
+./.git:
+total 52
+drwxrwxr-x 8 pulsys pulsys 4096 Aug 19 12:12 .
+drwxrwxr-x 4 pulsys pulsys 4096 Aug 19 12:12 ..
+drwxrwxr-x 2 pulsys pulsys 4096 Aug 19 12:12 branches
+-rw-rw-r-- 1 pulsys pulsys  277 Aug 19 12:12 config
+-rw-rw-r-- 1 pulsys pulsys   73 Aug 19 12:12 description
+...
+...
+```
 
 Some of the most useful ones are:
 
@@ -331,7 +400,24 @@ sudo apt -y install tree
 
 #### cd: Change Directory
 
+On login, you are usually in the home directory, which is represented
+by ~. It is similar to the user directories under C:\Users on
+Windows. Hence, you will probably need to go elsewhere. Here’s a list of
+common directories on Linux systems that are of
+
+`/etc` System configuration files (often pronounced slash-et-see
+if someone is instructing you what to do over the phone)
+
+`/var` Installed software generally writes here by default
+
+`/var/log` Log files 
+
+`/proc` Real-time system information -- similar to Windows Management Instrumentation (WMI) but easier ;-)
+
+`/tmp` Temporary files that are wiped by a reboot
+
 The `cd` command changes the current directory where you are located. It uses the format
+
 
 ```bash
 cd directoryname
@@ -346,6 +432,39 @@ pulsys@sandbox-tw8766 ~$ cd ~/bin
 ```
 
 In order the first command takes us to your home directory, the second one takes us to the `/usr/bin` directory and the last one takes us to the `bin` directory under your home. It could also be written as `cd /home/pulsys/bin`
+
+**Be Lazy** 
+
+Most modern interactive shells like our zsh and even Windows Command Prompt allow for tab expansion and command history, at least for the current session of the
+shell. This is a good thing in a crisis situation, because it saves you
+typing, and thus, time.
+
+Tab expansion is like autocomplete for the command prompt. Let’s say you
+have some files in a directory, as shown below:
+
+```bash
+pulsys@sandbox-fkayiwa:~/command_line_curriculum$ cd /var/log
+pulsys@sandbox-fkayiwa:/var/log$ ls
+alternatives.log       dmesg          kern.log.4.gz  ubuntu-advantage.log             vmware-vgauthsvc.log.0
+alternatives.log.1     dmesg.0        lastlog        ubuntu-advantage.log.1           vmware-vmsvc.1.log
+alternatives.log.2.gz  dmesg.1.gz     mysql          ubuntu-advantage-timer.log       vmware-vmsvc.2.log
+alternatives.log.3.gz  dmesg.2.gz     nginx          ubuntu-advantage-timer.log.1     vmware-vmsvc.3.log
+apt                    dpkg.log       private        ubuntu-advantage-timer.log.2.gz  vmware-vmsvc.log
+auth.log               dpkg.log.1     syslog         ubuntu-advantage-timer.log.3.gz  vmware-vmsvc-root.1.log
+auth.log.1             dpkg.log.2.gz  syslog.1       ubuntu-advantage-timer.log.4.gz  vmware-vmsvc-root.2.log
+auth.log.2.gz          dpkg.log.3.gz  syslog.2.gz    ubuntu-advantage-timer.log.5.gz  vmware-vmsvc-root.3.log
+auth.log.3.gz          faillog        syslog.3.gz    unattended-upgrades              vmware-vmsvc-root.log
+auth.log.4.gz          journal        syslog.4.gz    upgrade                          vmware-vmtoolsd-root.log
+BESClient              kern.log       syslog.5.gz    vmware-network.1.log             wtmp
+btmp                   kern.log.1     syslog.6.gz    vmware-network.2.log             wtmp.1
+btmp.1                 kern.log.2.gz  syslog.7.gz    vmware-network.3.log
+dist-upgrade           kern.log.3.gz  tallylog       vmware-network.log
+```
+Without tab expansion, typing out something like this is slow and error-prone:
+
+do the following
+
+`cd un`[TAB], where [Tab] represents hitting the Tab key, and because only one directory starts with un, tab expansion will fill in the rest of the directory name for you.
 
 #### mkdir: Make Directories
 

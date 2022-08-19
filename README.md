@@ -1,6 +1,6 @@
 # Command Line Curriculum
 
-This repository is an upgrade of a workshop provided to a regional [Code4Lib Conference](https://gitlab.com/kayiwa/command_line_curriculum)
+This repository is an upgrade of a workshop provided to a regional [Code4Lib Conference](https://gitlab.com/kayiwa/cli_workshop)
 
 Command Line Curriculum
 
