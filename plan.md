@@ -4,7 +4,7 @@
   1. [Editing Files](editing_files.md)
       * [emacs](sec3/emacs.md)
       * [nano](sec3/nano.md) 
-      * [Neovim](sec3/neovim.md)
+      * [Vim](sec3/vim.md)
       * [micro](sec3/micro.md)
       * [sed](sec3/sed.md)
       * [vi](sec3/vi.md)

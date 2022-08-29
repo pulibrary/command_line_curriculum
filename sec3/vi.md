@@ -35,7 +35,7 @@ _Line Movement_
 * `l`: Move right one character
 * `^`: Move to the beginning of a line
 * `$`: Move to the end of a line
-* `kG`: Go to like `k`
+* `k`: Go to like `k`
 * `G`: Go to the end of the file
 * `.`: Repeat the last edit (change, deletion) command
 

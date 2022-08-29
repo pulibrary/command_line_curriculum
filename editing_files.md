@@ -1,11 +1,11 @@
 ## Editing Files
 
-On Unix Systems, there are three main families of editors: `ed`, `vi` and `emacs`. The `ed` editor was the first of these three editors created. It is a line-oriented editor instead of a full-screen editor and will feel very primitive compared to `vi` and `emacs`. It is can be useful on the rare occasion when one is dealing with a console terminal. (I wishe no one ever to have to suffer this) If you run:
+In exploring text editors we will look at commandline based text editors found on UNIX systems: `ed`, `vi` and `emacs`. The `ed` editor was the first of these three editors created. It is a line-oriented editor instead of a full-screen editor and will feel very primitive compared to `vi` and `emacs`. It is can be useful on the rare occasion when one is dealing with a console terminal. (I wishe no one ever to have to suffer this) If you run:
 
 ```bash
 pulsys@sandbox-fkayiwa:~$ man ed
 ```
-you will see what is needed to use the editor. In this segment we will go use `vi/Neovim` and `mg/emacs` and `micro/nano` text Editors to manipulate files. Familiarity with all of them I feel is worth it.
+you will see what is needed to use the editor. In this segment we will use `vi/Neovim`, `mg/emacs` and `micro/nano` text Editors to manipulate files. Familiarity with all of them I feel is worth it.
 
 ## Choose and editor not a side
 

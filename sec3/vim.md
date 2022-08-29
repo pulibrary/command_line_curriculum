@@ -80,7 +80,7 @@ Later we will use a plugin that simplifies this.
 
 If you want to quit windows you use:
 
- * `q` - To quit the current window. Worth pointing out that `:q` doesn’t quit Neovim, but a window. Although, if there is only one window open, Neovim will close.
+ * `:q` - To quit the current window. Worth pointing out that `:q` doesn’t quit Neovim, but a window. Although, if there is only one window open, Neovim will close.
  * `:q!` - To quit the current window, even if there is only one window open with an unsaved buffer!.
  * `:qa` - To quit all the current windows. Add `!` if you don’t want to save your changes in unsaved buffers.
 
@@ -148,7 +148,7 @@ As an example let's map `s` to `dd` Keep in mind `s`ubstitute is already used in
   2. Try to hit the keystroke `dd`. It will delete a line. (hit `u` to undo the delete)
   3. Try to hit `s`. It deletes a line too.
 
-If you close your Neovim this silly change will vanish. The lesson here is avoid using the default Neovim's mappings. 
+If you close your Neovim this silly change will vanish. The lesson here is avoid making changed to the default Neovim's mappings. 
 
 If you want to create new mappings, you should use a special key called the leader key. It’s a way to create namespaces for keystrokes: first you use your leader key, then you use your keystroke. Thanks to the leader key, your new keystroke will never conflict with the default Neovim keystrokes.
 You need to set the variable mapleader to use the key you want as leader key. Here’s an example:
