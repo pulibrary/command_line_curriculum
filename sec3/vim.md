@@ -1,6 +1,6 @@
-## Neovim: a Deeper Dive into vi/Vim
+## vim: a Deeper Dive into vi/Vim
 
-All the steps included in the [vi](vi.md) will work in Neovim. We will take a deeper dive in using a modern implementation of vi in Neovim. We will look at
+All the steps included in the [vi](vi.md) will work in vim. We will take a deeper dive in using a modern implementation of vi in vim. We will look at
 
   * Ways to organize and open files
   * Useful motions to move around your code
@@ -10,11 +10,11 @@ All the steps included in the [vi](vi.md) will work in Neovim. We will take a de
   
 ## Spatial Organization
 
-If you’ve used an Intergrated Development Environment (IDE) before, you’re certainly used to managing your files with tabs. Neovim uses other ways to represent and organize open files. Indeed, there are four layers of abstraction you can use for that: the buffers, the windows, the tabs, and the argument list.
+If you’ve used an Intergrated Development Environment (IDE) before, you’re certainly used to managing your files with tabs. vim uses other ways to represent and organize open files. Indeed, there are four layers of abstraction you can use for that: the buffers, the windows, the tabs, and the argument list.
 
 ### Buffers
 
-A buffer directly matches to an open file in memory. To make a comparison with a standard IDE, a buffer would be the content of a tab. The big difference is that when you close a tab in an IDE, you also close the open file in it. Not in Neovim; if you close a window containing a buffer, the buffer is still there but it’s hidden.
+A buffer directly matches to an open file in memory. To make a comparison with a standard IDE, a buffer would be the content of a tab. The big difference is that when you close a tab in an IDE, you also close the open file in it. Not in vim; if you close a window containing a buffer, the buffer is still there but it’s hidden.
 In fact, a buffer can have three different states:
 
  * active - The buffer is displayed in a window.
@@ -48,7 +48,7 @@ You can type `:help buffers` while in your editor for more information on buffer
 
 ### Windows
 
-A window in Neovim is a space (or a place) you can use to display the content of a buffer. Don’t forget: when you close the window, the buffer is still in the buffer list.
+A window in vim is a space (or a place) you can use to display the content of a buffer. Don’t forget: when you close the window, the buffer is still in the buffer list.
 
 The simplest ways to create windows, use the command :new or one of these keystrokes:
 
@@ -80,7 +80,7 @@ Later we will use a plugin that simplifies this.
 
 If you want to quit windows you use:
 
- * `:q` - To quit the current window. Worth pointing out that `:q` doesn’t quit Neovim, but a window. Although, if there is only one window open, Neovim will close.
+ * `:q` - To quit the current window. Worth pointing out that `:q` doesn’t quit vim, but a window. Although, if there is only one window open, vim will close.
  * `:q!` - To quit the current window, even if there is only one window open with an unsaved buffer!.
  * `:qa` - To quit all the current windows. Add `!` if you don’t want to save your changes in unsaved buffers.
 
@@ -88,7 +88,7 @@ For now open vim and create now windows using the examples above.
 
 ### Tabs
 
-We saw that a buffer is a document (often an open file), and a window is the container for an active buffer. We can see tabs as a container for a bunch of windows. As a result, Neovim’s tabs are different from the usual tabs you can find in many IDEs!
+We saw that a buffer is a document (often an open file), and a window is the container for an active buffer. We can see tabs as a container for a bunch of windows. As a result, vim’s tabs are different from the usual tabs you can find in many IDEs!
 
 Here are the commands to create and delete tabs:
 
@@ -136,28 +136,28 @@ The quick brown fox jumps over the lazy dog
 The quick brown fox jumps over the lazy dog
 ```
 
-To work with this files we will demonstrate a simple example of remapped keys that mean less typing. For that one uses commands for all the Neovim modes:
+To work with this files we will demonstrate a simple example of remapped keys that mean less typing. For that one uses commands for all the vim modes:
 
   * `:nnoremap` - Create a new mapping for NORMAL mode (non recursive).
   * `:inoremap` - Create a new mapping for INSERT mode (non recursive).
   * `:vnoremap` - Create a new mapping for VISUAL mode (non recursive).
 
-As an example let's map `s` to `dd` Keep in mind `s`ubstitute is already used in your default mapping of a Neovim installation. Use the following commands on the file you just created.
+As an example let's map `s` to `dd` Keep in mind `s`ubstitute is already used in your default mapping of a vim installation. Use the following commands on the file you just created.
 
   1. Run the `ex` command `:noremap s dd`
   2. Try to hit the keystroke `dd`. It will delete a line. (hit `u` to undo the delete)
   3. Try to hit `s`. It deletes a line too.
 
-If you close your Neovim this silly change will vanish. The lesson here is avoid making changed to the default Neovim's mappings. 
+If you close your vim this silly change will vanish. The lesson here is avoid making changes to the default vim's mappings. 
 
-If you want to create new mappings, you should use a special key called the leader key. It’s a way to create namespaces for keystrokes: first you use your leader key, then you use your keystroke. Thanks to the leader key, your new keystroke will never conflict with the default Neovim keystrokes.
+If you want to create new mappings, you should use a special key called the leader key. It’s a way to create namespaces for keystrokes: first you use your leader key, then you use your keystroke. Thanks to the leader key, your new keystroke will never conflict with the default vim keystrokes.
 You need to set the variable mapleader to use the key you want as leader key. Here’s an example:
 
 ```bash
 :let mapleader = "\<space>"
 ```
 
-The mapping commands we saw above are often written in Neovim’s configuration file to set them automatically when you open Neovim. For example, you can write the following to the nvim configuration file:
+The mapping commands we saw above are often written in vim’s configuration file to set them automatically when you open vim. For example, you can write the following to the nvim configuration file:
 
 ```conf
 let mapleader = "\<space>"
@@ -170,7 +170,7 @@ We define our leader key and other keystrokes. The keystrokes `SPACE bn` will mo
 
 ### Jump motions
 
-There are special motions in Neovim called jump-motions. These motions move your cursor several lines away, like the keystroke gg we saw earlier.
+There are special motions in vim called jump-motions. These motions move your cursor several lines away, like the keystroke gg we saw earlier.
 
 #### Jump List
 Each time we use a jump motion, the position of the cursor before the jump is saved in the jump list. You can move through it with the following keystrokes:
@@ -196,7 +196,7 @@ Being able to jump from method to method, if you’re programming with some OOP 
 
 #### Repeating Keystrokes
 
-Here’s an extremely effective way to use Neovim. The following steps will reduce your toil significantly:
+Here’s an extremely effective way to use vim. The following steps will reduce your toil significantly:
 
   * `.` - Repeat the last change.
   * `@:` - Repeat the last command executed.
