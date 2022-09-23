@@ -21,3 +21,5 @@ sed s/BSD//g < ~/cli_workshop/data_files/operatingsystemlist
 sed s/BSD//g < ~/cli_workshop/data_files/operatingsystemlist > nobsdlist
 sed -n '/BSD/ p' ~/cli_workshop/data_files/operatingsystemlist
 ```
+
+There is a rust language reimplementation of most of sed with simpler syntax called [sd](https://github.com/chmln/sd)
