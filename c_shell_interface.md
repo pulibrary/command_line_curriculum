@@ -18,6 +18,72 @@ Every command has three "files" associated with it called **standard input, stan
 ```bash
 | | & < > >> >&
 ```
+#### common uses of stdout
+
+**File**
+
+The shell has a built in operator which will pipe the standard output of a program and write it to a file. It is the `>` or redirection operator:
+
+```zsh
+echo "Here's some data" > some_file.txt
+```
+
+Note that this will overwrite anything already in the file.
+
+**Append**
+
+What if you don't want to overwrite a file, but instead just add a new line? The >> or append redirection operator:
+
+```zsh
+echo "Taco Tuesday was awesome" >> diary.txt
+echo "Humpday was the best!" >> diary.txt
+echo "Thirsty Thursdays is fun" >> diary.txt
+```
+
+If you then run: 
+
+```zsh
+cat diary.txt
+```
+The results will be:
+
+```
+Taco Tuesday was awesome
+Humpday was the best!
+Thirsty Thursdays is fun
+```
+
+#### common uses of stdin 
+
+**the shell**
+
+The following example uses the shell as input:
+
+```zsh
+echo "I am in the $PWD folder" | sed 's/folder/directory/'
+```
+
+Here we've just used `echo` to write out message including a variable and then used the `sed`[stream editor](sec3/sed.md) program to replace the word `folder` with `directory`.
+
+**Files**
+
+The following example uses files as the input:
+
+```zsh
+cat ~/command_line_curriculum/data_files/names.txt| wc -l
+```
+
+Here instead of using `cat` to `stdout` we pipe the results to `wc`
+
+**Filtered Input**
+
+The following example uses `head` as the input:
+
+```zsh
+head -n 5 ~/command_line_curriculum/data_files/libraries-visits.csv > 5linefile.csv
+```
+
+The `head` (display first lines of a file) command in this case just grabs the first 5 lines of a file and puts it straight into a smaller, more manageable file. The `>` symbol (`the redirection symbol`) will be described section when we talk about file reditection.
 
 ### file redirection
 
