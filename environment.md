@@ -1,20 +1,94 @@
+## Your Unix Environment 
+
+In the [Last Section](login.md) we logged into our Unix/Linux computer (server) and had a very high overview of how to get help. We will look at shells in the section. Our focus for the rest of the workshop will be on using the [Zsh](https://zsh.sourceforge.io/) Shell. 
+
+To be sure you are running the `zsh` and/or that your computer (server) has the shell run the following commands:
+
+```zsh
+chsh -s $(which zsh)
+```
+
+The steps above involve command substitution which is used to replace which zsh with its result. `which` finds the path to Zsh. If Zsh is installed, it will be set as the default shell.
+
+You will be prompted for your login password in order for this to complete. If this fails install the Zshell with the following command:
+
+```zsh
+sudo apt -y install zsh
+```
+
+All shells have startup files or startup scripts that are executed as soon as a new shell session starts. The following example demonstrates how a startup script can look like. Please note that this example expects [Oh My Zsh](https://ohmyz.sh/) to be installed.
+
+Zsh shells stores the startup file in the user’s home directory at `~/.zshrc`. The script itself is just a file with commands written on new lines.
+
+In startup scripts, we usually want to:
+• Set shell settings (called options)
+• Export environment variables
+• Configure the prompt
+• Change themes
+• Set up custom aliases
+• Define custom functions
+
+*Example ~/.zshrc file*
+
+```
+# SHELL OPTIONS
+HISTSIZE=10000000
+SAVEHIST=10000000
+setopt EXTENDED_HISTORY
+# ENVIRONMENT VARIABLES
+export EDITOR="vim"
+export PATH="$HOME/bin:$PATH"
+# PROMPT
+export PS1="> "
+# THEME
+ZSH_THEME="af-theme"
+```
+
+It is possible to configure what is shown in a command prompt by adjusting the
+environment variable PS1 as demonstrated by [Easy Bash Prompt Generator](https://ezprompt.net/). [Powerline](https://github.com/powerline/powerline) is a helpful plugin for Z shell, Vim, and other programs that displays more information in a beautiful way.
+
+Coming up completely with our configuration can be time-consuming. This is where
+frameworks like [Oh My BASH](https://ohmybash.nntoan.com/) and [Bash-it](https://github.com/Bash-it/bash-it) for Bash and [Oh My Zsh](https://ohmyz.sh/) for Z shell come handy. They include default configurations that one can expand on and come with useful functions, plugins, and themes ready to be used.
+
+## Oh my Zsh (optional)
+
+Understanding that customization is personal. I am recommending at the very least installing the Oh My Zsh for the rest of this workshop.
+
+**Pre-requisites**
+
+ 1. We will need the following:
+
+```zsh
+sudo apt install wget git
+```
+
+ 2. Install **Oh my Zsh** with the following command:
+
+```zsh
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+```
+
+Once you Install [Oh My Zsh](https://ohmyz.sh/), it will take a backup of your existing .zhrc file. Then a new .zshrc file will be created with configurations. So whenever you decide to remove OH-MY-ZSH using the uninstaller, an automatically old .zshrc file will be reverted.
+
+3. You have to run `source ~/.zshrc` for changes to be effective. 
+
 ## Variables
 
-The *PATH* described at the end of the [Getting in and Out Session](login.md) stored as a process environment variable, exposed in a shell as a shell variable.
+The *PATH* described above and in the last section are stored as a process environment variable, exposed in a shell as a shell variable.
 
 Shell variables have case-sensitive names made from sequence of alphanumeric
 characters and underscores. It stores a value, usually a string or a number, and can have several attributes as shown here:
 
-```bash
-pulsys@sandbox-tw8766:~$ my_variable=42
-pulsys@sandbox-tw8766:~$ echo $my_variable
+```zsh
+my_variable=42
+echo $my_variable
 42
 ```
 Pay particular attention to no space between `my_variable` and the number `42` Try running the same commands above but add space.
 
 ## Environment Variables
 
-Process environment variables (also env vars) are not the same as shell variables we just described. They are configuration variables that every process has in Unix-like operating systems. A shell session a process that receives env vars from the system when it is run. The shell imports them at startup time as regular variables and marks them as exported.
+Process environment variables (also referred to env vars) are not the same as shell variables we just described. They are configuration variables that every process has in Unix-like operating systems. A shell session a process that receives env vars from the system when it is run. The shell imports them at startup time as regular variables and marks them as exported.
 
 Every variable marked as exported will be copied into the process environment of
 all child processes started in the shell. This behavior makes it possible to pass
@@ -24,8 +98,8 @@ To see all variables marked as exported (which will eventually become environmen
 variables of the child processes), use the command `export`.
 
 
-```bash
-pulsys@sandbox-tw8766:~$ export
+```zsh
+export
 declare -x HOME="/home/pulsys"
 declare -x LANG="en_US.UTF-8"
 declare -x LANGUAGE="en_US:"
@@ -54,7 +128,7 @@ declare -x XDG_SESSION_TYPE="tty"
 To promote a regular variable into an environment variable, we need to export it. A
 variable can be exported and assigned at the same time:
 
-```bash
+```zsh
 VAR_42='the answer to life the universe and everything'
 export VAR_42
 ```
@@ -72,6 +146,46 @@ We will make modifications to the PATH. It will make it possible to execute prog
 export PATH="$HOME/bin:$PATH"
 ```
 
-We set PATH to a new value, using variable substitution to use both the path to our
-home directory and the previous value of PATH. We export it to make it available to
-child processes as well. It is important to remember once again if you log out of this session your new PATH will cease to work.
+We set PATH to a new value, using variable substitution to use both the path to our home directory and the previous value of PATH. We export it to make it available to child processes as well. It is important to remember once again if you log out of this session your new PATH will cease to work.
+
+Let's view our current session environment variables by typing:
+
+```zsh
+env
+```
+
+**We can now look at some information about our system.**
+
+Print system information with the following:
+
+```zsh
+uname -a
+```
+
+Use the manual or any online tools from the [last section](login.md) to determine what the results mean.
+
+Let's find out what how long our system has been running. This used to be a source of pride for many a system administrator:
+
+```zsh
+uptime
+```
+
+Let's print out what the date is with:
+
+```zsh
+date
+```
+
+#### In a Nutshell
+
+In this section we have looked at:
+
+* how environment variables are used. 
+* how to modify your default shell
+* what your `PATH` is
+
+### Exercises
+ 1. What is your current prompt? How do you change your current prompt?
+ 2. What is your host name?
+ 3. How do you change your shell? (Bash --> Zsh)
+ 4. What is uptime and what is a date?
