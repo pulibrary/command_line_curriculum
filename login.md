@@ -1,12 +1,27 @@
-## Shells and Terminals
+## Meet your Command Line Sandbox
+
+In this section of the workshop we will familiarize ourselves with our Unix/Linux system. 
+
+### Shells and Terminals
 
 Shell is a term for graphical or text-based interfaces that we use to interact with operating systems. They are programs that provide a form of input and output to control computers. We often use a graphical user interface and thus a graphical shell. When we open a command-line window, also called terminal, a text-based shell is started for us in that window. Using this shell, we can control the computer by issuing text commands. Modern terminals work as terminal emulators, emulating text-based environments in a graphical interface.
 
-There are several text-based shells that we can use, but the one used at PUL is *Bourne Again SHell*, known as [Bash](https://www.gnu.org/software/bash/). It is the shell commonly associated with all the Virtual Machines developers will use at PUL. Another popular shell is [Z shell](https://zsh.sourceforge.io/) (Zsh), now the default shell on macOS. [fish shell](https://fishshell.com/) is also gaining popularity, being designed to be a user-friendly shell with good defaults. However, it is less compatible with the other mentioned shells. Windows operating system also has its shell called *PowerShell*.
+There are several text-based shells that we can use, but the one used at Princeton University Library (PUL) is *Bourne Again SHell*, known as [Bash](https://www.gnu.org/software/bash/). It is the shell commonly associated with all the Virtual Machines developers will use at PUL. Another popular shell is [Z shell](https://zsh.sourceforge.io/) (Zsh), now the default shell on macOS. [fish shell](https://fishshell.com/) is also gaining popularity, being designed to be a user-friendly shell with good defaults. However, it is less compatible with the other mentioned shells. Windows operating system also has its shell called *PowerShell*.
 
-Besides terminals, we can take advantage of terminal multiplexers. We use [tmux](https://github.com/tmux/tmux/wiki) to open multiple shells in one window or screen. Terminal multiplexers can also detach and reattach a shell session which can be helpful in controlling remote processes.
+Besides terminals, we can take advantage of terminal multiplexers. We use [tmux](https://github.com/tmux/tmux/wiki) (prounounced tee-mux) to open multiple shells in one window or screen. Terminal multiplexers can also detach and reattach a shell session which can be helpful in controlling remote processes.
 
-log in to your virtual machine with `ssh pulsys@sandbox-<yournetid>.lib.princeton.edu`
+To use a Unix/Linux system you must log in to the computer/server, which requires a **login name** and **password**. It is important to remember that Unix is a case-sensitive system. Both login names and passwords will treat an uppercase letter and a lowercase letter as different.
+
+Log in to your virtual machine with `ssh pulsys@sandbox-<yournetid>.lib.princeton.edu` (for those at PUL where the login name is `pulsys` and the password is your public keys)
+
+For every one else enter the user name of your system at the login prompt and press return.
+
+`login:`
+
+and then enter your password and press return
+
+`password:`
+
 
 Clone this repository by typing the following:
 
@@ -17,13 +32,13 @@ git clone https://github.com/pulibrary/command_line_curriculum.git
 If you get an error like this below:
 
 ```bash
-pulsys@sandbox-fkayiwa:~$ git clone https://github.com/pulibrary/command_line_curriculum.git
+git clone https://github.com/pulibrary/command_line_curriculum.git
 -bash: git: command not found
 ```
 It means that the `git` client is not installed. Fix that with the following (we will explain what happened as you progress):
 
 ```bash
-pulsys@sandbox-fkayiwa:~$ sudo apt -y install git
+sudo apt -y install git
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
@@ -33,27 +48,30 @@ The following additional packages will be installed:
 ...
 ```
 
-## Prompt
+### Prompt
 
 ![login_window](images/login_window.png)
 
-Opening a terminal will start a new shell session. We are then given access to a command line to execute commands. The beginning of the command line before the cursor is known as the command prompt (the [`pulsys@sandbox-tw8766 ~$`] in the picture).
+Opening a terminal will start a new shell session. We are then given access to a command line to execute commands. The beginning of the command line before the cursor is known as the command prompt (the [`pulsys@sandbox-tw8766 ~$`] in the picture). The attached image is what users at PUL will see this. Others will will have `user@laptop`
+
 Typically, the following is displayed:
   * The user name of the user running the shell. The user affects all executed commands, as they will be run within this user’s permissions.
-  * The name or an IP address of the computer where commands will be executed
+  * The hostname or an IP address of the computer where commands will be executed
   * The currently selected directory (the ~ in the picture after the computer name). The currently selected directory (the ~ in the picture after the computer name). A tilde refers to the user’s home directory.
   * The account type. By convention, the dollar sign ($) denotes a regular user whereas the hash (#) is used for system administrators. In documentation and various tutorials, these symbols might be used to distinguish whether something should be run under administrator privileges.
     * run the following command on the VM `sudo bash` which will elevate your privileges to become a super user and watch the dollar ($) change to a (#)
+    * We will discuss the super user (sometimes referred to as root user later). For now this user will run any command you instruct the computer to do including harmful things you did not intend. Caution should be used when using running commands as root if not avoided altogether.
+    * Type `exit` on your terminal to become your normal user.
 
-## Running Commands
+### Running Commands
 
 Running commands is as simple as typing them and hitting **Enter**. However, it is
 important to know where a command is executed in the file system. Typically, a new
 shell session will start at our home directory like `/home/pulsys`  who is the name of our user on our VMs. (it can sometimes be `deploy` or `conan`). We can see where we are by running the command `pwd` (print working directory):
 
 ```bash
-pulsys@sandbox-tw8766:~$ pwd
-/home/pulsys
+pwd
+/home/<yourusername>
 ```
 
 A command like this seems straightforward, but it is not. The problem is that `pwd` can run a script, an executable binary, a custom shell function, an alias, or a shell built-in (built-ins are utilities implemented directly in the shell itself). We will see all of those things in action later. 
@@ -69,22 +87,20 @@ pwd is /bin/pwd
 
 `pwd` is a shell built-in. Because it is a shell built-in, it will take precedence over external programs. Notice in the the output above it is mentioned first.
 
-Shells will search for executable programs in a list of locations called the PATH. On Linux, the PATH looks something like this:
+Shells will search for executable programs in a list of locations called the `PATH`. On Linux, the PATH looks something like this:
 
 ```bash
-/home/pulsys/.local/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/local/sb
-in:/usr/bin:/usr/sbin:/home/username/bin:/var/lib/snapd/snap/bin
+/home/<yourusername>/.local/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/local/sb
+in:/usr/bin:/usr/sbin:/home/<username>/bin:/var/lib/snapd/snap/bin
 ```
 
 We can see that the PATH is just a list of file system paths separated by semicolons. Any program in one of these locations can be executed without specifying its location.
 
 Because `/usr/bin` is mentioned here, the shell can find `/usr/bin/pwd` just based on the file name. If multiple programs have the same name, the order of the paths will be taken into account.
 
-What can we do if a program is not on the PATH, or when we need to run a program
-overshadowed by another program or built-in of the same name? We need to run it by typing the absolute or relative file path.
+What can we do if a program is not on the `PATH`, or when we need to run a program overshadowed by another program or built-in of the same name? We need to run it by typing the absolute or relative file path.
 
-The PATH is stored as a process environment variable, exposed in a shell as a shell
-variable
+The `PATH` is stored as a process environment variable, exposed in a shell as a shell variable which we will discuss further in the next section
 
 ## Online help
 
@@ -101,17 +117,8 @@ editor (1)           - Nano's ANOther editor, an enhanced free Pico clone
 ex (1)               - Vi IMproved, a programmer's text editor
 nano (1)             - Nano's ANOther editor, inspired by Pico
 pico (1)             - Nano's ANOther editor, an enhanced free Pico clone
-red (1)              - line-oriented text editor
-rview (1)            - Vi IMproved, a programmer's text editor
-rvim (1)             - Vi IMproved, a programmer's text editor
-sed (1)              - stream editor for filtering and transforming text
-select-editor (1)    - select your default sensible-editor from all installed editors
-sensible-editor (1)  - sensible editing
-tc-pedit (8)         - generic packet editor action
-tc-skbmod (8)        - user-friendly packet editor action
-vi (1)               - Vi IMproved, a programmer's text editor
-view (1)             - Vi IMproved, a programmer's text editor
-vim (1)              - Vi IMproved, a programmer's text editor
+...
+...
 ```
 
 To display the actual page manual for pico type:
@@ -160,4 +167,24 @@ As demonstrated earlier you can look for information about a command without kno
 
 In addition to this most commands will use the -h or --help flag. Let's try it with our result from before
 
+### Other online help
+
+It will be helpful to learn how to read the Unix/Linux manual but some of the following resources are useful in getting one out of a jam.
+
+  * [https://explainshell.com/](https://explainshell.com/)
+  * [https://tldr.sh/](https://tldr.sh/)
+
 To exit your VM type `exit` 
+
+### Summary
+
+We are done a very quick overview of what your Unix/Linux system can do. 
+
+## Exercises
+
+  1. What is your user name? (hint: use the `id` command)
+  2. What is uptime and what is a date? (hint: use the `apropos uptime`)
+  3. What is a manual? How to access the manual?
+  4. What is 'root' and how can I tell that I am logged in as 'root' right now?
+  5. What is your IP address? (hint: `man ip`)
+  6. Why do we not just run everything as `root`
