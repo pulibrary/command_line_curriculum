@@ -1,20 +1,20 @@
 ## Meet your Command Line Sandbox
 
-In this section of the workshop we will familiarize ourselves with out Unix/Linux system. 
+In this section of the workshop we will familiarize ourselves with our Unix/Linux system. 
 
 ### Shells and Terminals
 
 Shell is a term for graphical or text-based interfaces that we use to interact with operating systems. They are programs that provide a form of input and output to control computers. We often use a graphical user interface and thus a graphical shell. When we open a command-line window, also called terminal, a text-based shell is started for us in that window. Using this shell, we can control the computer by issuing text commands. Modern terminals work as terminal emulators, emulating text-based environments in a graphical interface.
 
-There are several text-based shells that we can use, but the one used at PUL is *Bourne Again SHell*, known as [Bash](https://www.gnu.org/software/bash/). It is the shell commonly associated with all the Virtual Machines developers will use at PUL. Another popular shell is [Z shell](https://zsh.sourceforge.io/) (Zsh), now the default shell on macOS. [fish shell](https://fishshell.com/) is also gaining popularity, being designed to be a user-friendly shell with good defaults. However, it is less compatible with the other mentioned shells. Windows operating system also has its shell called *PowerShell*.
+There are several text-based shells that we can use, but the one used at Princeton University Library (PUL) is *Bourne Again SHell*, known as [Bash](https://www.gnu.org/software/bash/). It is the shell commonly associated with all the Virtual Machines developers will use at PUL. Another popular shell is [Z shell](https://zsh.sourceforge.io/) (Zsh), now the default shell on macOS. [fish shell](https://fishshell.com/) is also gaining popularity, being designed to be a user-friendly shell with good defaults. However, it is less compatible with the other mentioned shells. Windows operating system also has its shell called *PowerShell*.
 
-Besides terminals, we can take advantage of terminal multiplexers. We use [tmux](https://github.com/tmux/tmux/wiki) to open multiple shells in one window or screen. Terminal multiplexers can also detach and reattach a shell session which can be helpful in controlling remote processes.
+Besides terminals, we can take advantage of terminal multiplexers. We use [tmux](https://github.com/tmux/tmux/wiki) (prounounced tee-mux) to open multiple shells in one window or screen. Terminal multiplexers can also detach and reattach a shell session which can be helpful in controlling remote processes.
 
-To use a Unix/Linux system you must log in to the computer/server, which requires a **login name** and **password**. It is important to remember that Unix is a case-sensitive system. Both login names and passwords will treat and uppercase letter and a lowercase letter as different.
+To use a Unix/Linux system you must log in to the computer/server, which requires a **login name** and **password**. It is important to remember that Unix is a case-sensitive system. Both login names and passwords will treat an uppercase letter and a lowercase letter as different.
 
-log in to your virtual machine with `ssh pulsys@sandbox-<yournetid>.lib.princeton.edu` (for those at PUL where the login name is `pulsys` and the password is your public keys)
+Log in to your virtual machine with `ssh pulsys@sandbox-<yournetid>.lib.princeton.edu` (for those at PUL where the login name is `pulsys` and the password is your public keys)
 
-For every every one else enter the user name of your system at the login prompt and press return.
+For every one else enter the user name of your system at the login prompt and press return.
 
 `login:`
 
@@ -52,15 +52,15 @@ The following additional packages will be installed:
 
 ![login_window](images/login_window.png)
 
-Opening a terminal will start a new shell session. We are then given access to a command line to execute commands. The beginning of the command line before the cursor is known as the command prompt (the [`pulsys@sandbox-tw8766 ~$`] in the picture).
+Opening a terminal will start a new shell session. We are then given access to a command line to execute commands. The beginning of the command line before the cursor is known as the command prompt (the [`pulsys@sandbox-tw8766 ~$`] in the picture). The attached image is what users at PUL will see this. Others will will have `user@laptop`
 
 Typically, the following is displayed:
   * The user name of the user running the shell. The user affects all executed commands, as they will be run within this user’s permissions.
-  * The name or an IP address of the computer where commands will be executed
+  * The hostname or an IP address of the computer where commands will be executed
   * The currently selected directory (the ~ in the picture after the computer name). The currently selected directory (the ~ in the picture after the computer name). A tilde refers to the user’s home directory.
   * The account type. By convention, the dollar sign ($) denotes a regular user whereas the hash (#) is used for system administrators. In documentation and various tutorials, these symbols might be used to distinguish whether something should be run under administrator privileges.
     * run the following command on the VM `sudo bash` which will elevate your privileges to become a super user and watch the dollar ($) change to a (#)
-    * We will discuss the super user (sometime referred to as root user later). For now this user will run any command you instruct the computer to do including harmful things you did not intent. Caution should be used when using running as root if not avoided altogether.
+    * We will discuss the super user (sometimes referred to as root user later). For now this user will run any command you instruct the computer to do including harmful things you did not intend. Caution should be used when using running commands as root if not avoided altogether.
     * Type `exit` on your terminal to become your normal user.
 
 ### Running Commands
@@ -187,3 +187,4 @@ We are done a very quick overview of what your Unix/Linux system can do.
   3. What is a manual? How to access the manual?
   4. What is 'root' and how can I tell that I am logged in as 'root' right now?
   5. What is your IP address? (hint: `man ip`)
+  6. Why do we not just run everything as `root`
