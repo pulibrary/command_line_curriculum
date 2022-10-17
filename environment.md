@@ -10,11 +10,12 @@ pulsys@sandbox-tw8766:~$ my_variable=42
 pulsys@sandbox-tw8766:~$ echo $my_variable
 42
 ```
-Pay particular attention to no space between `my_variable` and the number `42` Try running the same commands above but add space.
+
+**NOTE** Do not put spaces around the equals sign or it will result in an error.
 
 ## Environment Variables
 
-Process environment variables (also env vars) are not the same as shell variables we just described. They are configuration variables that every process has in Unix-like operating systems. A shell session a process that receives env vars from the system when it is run. The shell imports them at startup time as regular variables and marks them as exported.
+Process environment variables (also env vars) are not the same as shell variables we just described. They are configuration variables that every process has in Unix-like operating systems. A shell session is a process that receives env vars from the system when it is run. The shell imports them at startup time as regular variables and marks them as exported.
 
 Every variable marked as exported will be copied into the process environment of
 all child processes started in the shell. This behavior makes it possible to pass
