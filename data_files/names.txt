@@ -1,0 +1,7 @@
+Dennis Ritchie:001:Harvard
+Ken Thompson:002:Berkeley
+David Korn:003:Rensselaer
+Brian Fox:004:Null
+Paul Falstad:005:Princeton
+Bill Joy:006:Berkeley
+Ken Greer:007:Carnegie
