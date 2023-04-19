@@ -17,7 +17,6 @@
       * [echo](sec5/echo.md)
       * [find](sec5/find.md)
       * [sudo](sec5/sudo.md)
-      * [script](sec5/script.md)
       * [uptime](sec5/uptime.md)
       * [wc](sec5/wc.md)
       * [who](sec5/who.md)
