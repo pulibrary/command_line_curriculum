@@ -84,7 +84,7 @@ set variable = value
 Lets see what our currrent variables look like by running the
 
 ```bash
-dritchie@cliwkshp:~$ set | less
+set | less
 ```
 command in our terminal. Let's change our prompt to say `cliwkshp` instead using the following:
 
