@@ -76,7 +76,7 @@ after that every time we type the command `whereami` it would display the same r
 
 ### c shell variables
 
-Several variables are associated exclusively with the C shell. User the `set` command to assign values to these variables. The format of the `set` command is:
+Several variables are associated exclusively with the C shell. Use the `set` command to assign values to these variables. The format of the `set` command is:
 
 ```bash
 set variable = value
