@@ -19,7 +19,7 @@ The most common but hardly exhaustive comandlist arguments that your instructor 
 Once the file is located one can either:
 
 * `-print`: Print full pathname when the file is found
-* `-exec command`: Execute a Unix command on that file. The end of the command is marked with a `";"` The brackets `"{ }"` are replaces by the name of the file. 
+* `-exec command`: Execute a Unix command on that file. The end of the command is marked with a `";"` The brackets `"{ }"` are replaced by the name of the file. 
 
 To list all files greater that 51200 bytes in the `data_files` directory:
 
