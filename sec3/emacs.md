@@ -16,7 +16,7 @@ Running `mg` creates a window on our screen containing:
 
 ### escape and control keys
 
-`mg` relies heavily on the escape key and the control key. Throughut this section, `<esc>` means to type the escape key and `<cntl>`. For example.
+`mg` relies heavily on the escape key and the control key. Throughout this section, `<esc>` means to type the escape key and `<cntl>`. For example.
 
 ```bash
 <esc> a
