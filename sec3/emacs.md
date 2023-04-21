@@ -24,7 +24,7 @@ Running `mg` creates a window on our screen containing:
 <cntl>-a
 ```
 
-Means type the escape key and then the a key, which is sometimes referred to as an *escape sequence* and the second one is hold down the control key and then press the `a` key while holding the control key. This is known as a *control character*. If you don't do this the text is inserted into the buffer.
+Means type the escape key and then the `a` key, which is sometimes referred to as an *escape sequence* and the second one is hold down the control key and then press the `a` key while holding the control key. This is known as a *control character*. If you don't do this the text is inserted into the buffer.
 
 ### Character Operations
 
