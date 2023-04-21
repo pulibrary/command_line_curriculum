@@ -15,7 +15,7 @@ By default, sort orders the entire lines starting in the first column. This is h
 * `-k` : Restrict a sort key that has the starting position field1, and optional ending position field2 of a key field.
 
 Example Usage:
-We have a an example of list with Operating Systems separated by tab characters.
+We have an example of list with Operating Systems separated by tab characters.
 
 ```bash
 cd ~
