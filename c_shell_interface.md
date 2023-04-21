@@ -13,7 +13,7 @@ The C shell (csh) is the interface to the Unix system and is responsible for int
 
 ### standard input, output and error
 
-Every command has three "files" associated with it called **standard input, standard output**, and **standard error**. Input may read from standard input (keyboard), output may send to standard output (screen), and error messages get sent to standard error (logs, screen). These defaults devices may be changed using one of the following special shell symbols:
+Every command has three "files" associated with it called **standard input, standard output**, and **standard error**. Input may read from standard input (keyboard), output may send to standard output (screen), and error messages get sent to standard error (logs, screen). These default devices may be changed using one of the following special shell symbols:
 
 ```bash
 | | & < > >> >&
