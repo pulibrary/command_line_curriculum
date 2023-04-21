@@ -81,7 +81,7 @@ Several variables are associated exclusively with the C shell. Use the `set` com
 ```bash
 set variable = value
 ```
-Lets see what our currrent variables look like by running the
+Let's see what our current variables look like by running the
 
 ```bash
 set | less
