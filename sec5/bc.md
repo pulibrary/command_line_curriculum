@@ -5,7 +5,7 @@ The format for the `bc` command is:
 ```bash
 bc [ file ]
 ```
-`bc` is an interactive calculator with unlimited precision arithmetic. It is one of the instructors favorite commands to "pass time with". For example one nice feature of `bc` is that you can set the parameter scale to indicate the desired precision. For example, if you set scale=100, all calculations will be carried out to 100 decimal places. It is one of the *to my knowledge* the only unix tool with a Hilary Mason maintained [twitter account](https://twitter.com/bc_l)
+`bc` is an interactive calculator with unlimited precision arithmetic. It is one of the instructor's favorite commands to "pass time with". For example one nice feature of `bc` is that you can set the parameter scale to indicate the desired precision. For example, if you set scale=100, all calculations will be carried out to 100 decimal places. It is one of the *to my knowledge* only unix tools with a Hilary Mason maintained [twitter account](https://twitter.com/bc_l)
 
 Example usage:
 
