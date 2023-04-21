@@ -1,0 +1,4 @@
+tr command for translations.
+du command for disk usage
+ls command is an interactive calculator 
+wc command lists number of lines
