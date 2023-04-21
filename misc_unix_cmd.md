@@ -2,7 +2,7 @@
 
 For the rest of the curriculum we will look at Unix commands the instructor thinks you will encounter. In designing this I lumped the next section into "filters" and "file archiving and networking commands". These are the ones I couldn't neatly fit in those two.
 
-The commands we will look at is:
+The commands we will look at are:
 
 1. `echo` : Print a line of output
 2. `who` : Show who is working on the system
