@@ -28,7 +28,7 @@ The C shell interprets the following symbols as the file redirection symbols:
 * `<` : Use file as standard input
 * `>` : Use file as standard output
 * `>>` : Append standard output to the file
-* `>&` : Write both standard error and standard outut to the file
+* `>&` : Write both standard error and standard output to the file
 
 We can sort the contents of `library-visits.csv` and put the output into a file called `sorted.csv`
 
