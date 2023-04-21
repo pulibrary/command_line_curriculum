@@ -5,7 +5,7 @@ The `du` command tells us how much disk space is used by files. The format of th
 ```bash
 du [options] directoryname
 ```
-`du` without any options will show you the amount of space in each subdirectory and the total disk usage. This useful when trying to locate unneeccessary and large files in your directory. These results using pipes can be save a list of the largest files.
+`du` without any options will show you the amount of space in each subdirectory and the total disk usage. This is useful when trying to locate unneccessary and large files in your directory. These results using pipes can be saved as a list of the largest files.
 
 ```bash
 du --help
