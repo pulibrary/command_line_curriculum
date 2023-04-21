@@ -59,7 +59,7 @@ Show all lines that have BSD:
 ```bash
 grep --help
 ```
-From the reading the help menu you will see the `-F` flag which we will use:
+From reading the help menu you will see the `-F` flag which we will use:
 
 dritchie@cliwkshp:~$ grep -F BSD cli_workshop/data_files/operatingsystemlist
 OpenBSD     BSD             2016-03
