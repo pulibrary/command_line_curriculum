@@ -101,7 +101,7 @@ Let's see what commands we have run on the VM
 ```bash
 history
 ```
-### reexuciting commands
+### reexecuting commands
 
 There is also the `!` (called the **bang** character) which refers to some previously executed command. Typing `!!` means to execute the previous command again.
 
