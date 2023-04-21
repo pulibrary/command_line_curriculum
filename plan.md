@@ -28,7 +28,6 @@
       * [sort](sec6/sort.md)
       * [tail](sec6/tail.md)
       * [tee](sec6/tee.md)
-      * [tr](sec6/tr.md)
   5. [Communication and File Archiving](com_file_arch.md)
       * [finger](sec7/finger.md)
       * [gzip, gunzip, zcat](sec7/gzip.md)
