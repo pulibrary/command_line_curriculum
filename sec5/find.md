@@ -38,7 +38,7 @@ To remove all files in my home directory that have "core dumped"
 ```bash
 find ~ -name core -exec rm "{ }" ";"
 ```
-To use the `-o` and `-a` flags, the conditions must be in parenthesis. To remove all files in my home directory named a.out or core that haven't been accessed within 10 days:
+To use the `-o` and `-a` flags, the conditions must be in parentheses. To remove all files in my home directory named a.out or core that haven't been accessed within 10 days:
 
 ```bash
 find ~ "(" -name a.out -o -name core ")" -atime +10 exec rm "{ }" ";"
