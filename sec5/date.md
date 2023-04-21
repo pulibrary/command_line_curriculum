@@ -5,7 +5,7 @@ The format for the `date` command is:
 ```bash
 date [ -u ] [ yymmddhhmm [ .ss] ]
 ```
-The comman `date` without any options displays the current date and time. As super user using `sudo` you can change the time using the `--set` flag.
+The command `date` without any options displays the current date and time. As super user using `sudo` you can change the time using the `--set` flag.
 
 Example usage:
 
