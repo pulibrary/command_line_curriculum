@@ -5,7 +5,7 @@ The format of the `head` command is
 ```bash
 head [ -count ] [ file ]
 ```
-where count is the number of lines from the top of the program to display. If no count is given, the default value is 10. When no file is specified is specified, the input comes from standard input.
+where count is the number of lines from the top of the program to display. If no count is given, the default value is 10. When no file is specified, the input comes from standard input.
 
 Example usage:
 
