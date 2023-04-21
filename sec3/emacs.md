@@ -69,7 +69,7 @@ Word operations work with an entire word of text at one time instead of just one
 * `<esc>f` : Move forward one word
 * `<esc><delete>` : Delete one word to the left
 * `<esc>d` : Delete one word to the right
-* `<esc>t` : Transpose the two words aroud the cursor
+* `<esc>t` : Transpose the two words around the cursor
 * `<ecs>c` : Capitalize a word. Must be at the beginning of a word for this to work consistently
 * `<esc>u` : Convert a word to uppercase
 * `<esc>l` : Convert a word to lowercase
