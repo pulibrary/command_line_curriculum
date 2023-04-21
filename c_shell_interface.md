@@ -113,7 +113,7 @@ Typing
 
 # Exercises
 
-1. Get the file from `~/cli_workshop/names.txt` and after reading the manual. Sort those names alphabetically.
+1. Get the file from `~/cli_workshop/names.txt` and after reading the manual, sort those names alphabetically.
 1. If a user logs into a Unix system and types the following input to the shell, list the commands executed by the shell for each of the history substitutions:
 
 ```bash
