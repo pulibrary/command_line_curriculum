@@ -10,7 +10,7 @@ The most common but hardly exhaustive comandlist arguments that your instructor 
 * `-name filename` : Look for files with that name
 * `-user username` : Look for files owned by that user
 * `-perm permission` : Look for files with a certain permission
-* `-atime days` : Look for files accessed withing a certain number of days
+* `-atime days` : Look for files accessed within a certain number of days
 * `-mtime days` : Look for files modified withing a certain number of days
 * `-size blocks` : File size of 512 byte blocks
 * `-a` : And two conditions
