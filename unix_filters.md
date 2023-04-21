@@ -1,6 +1,6 @@
 # Unix filters
 
-Unix relies heavily on filters to sort files and search for keywords in a file. A **filter** is a command that takes some input, transforms the data and send it out as output. 
+Unix relies heavily on filters to sort files and search for keywords in a file. A **filter** is a command that takes some input, transforms the data and sends it out as output. 
 We will look at the following in this section:
 
 * `sort` : Sort information
