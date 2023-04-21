@@ -83,7 +83,7 @@ Centos      Linux           2016-02
 Gentoo      Linux           2016-07
 ```
 
-Show all occurences of a single character, followed by an `e`, followed one or more occurences of an `n`:
+Show all occurrences of a single character, followed by an `e`, followed by one or more occurrences of an `n`:
 
 ```bash
 grep -E '.en+' cli_workshop/data_files/operatingsystemlist
