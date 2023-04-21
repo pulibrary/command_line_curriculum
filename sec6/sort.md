@@ -1,6 +1,6 @@
 ## sort: sort files
 
-The `sort` command sorts infomation in files. We've already used it in the workshop but we will look at it in more detail as a filter. Until now we've used it generically but sort uses this format
+The `sort` command sorts information in files. We've already used it in the workshop but we will look at it in more detail as a filter. Until now we've used it generically but sort uses this format
 
 ```bash
 sort [ - bdfnrtx ] [ +pos1 [ -pos2] ] [ -T directory ] [ name ]
