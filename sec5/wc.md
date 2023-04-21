@@ -1,4 +1,4 @@
-## wc: List number of lines, word and characters
+## wc: List number of lines, words, and characters
 
 The format for the `wc` command is
 
