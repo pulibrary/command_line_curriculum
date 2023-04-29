@@ -23,13 +23,13 @@ rsync --help
 From the `rsync` manual we will use the `-a`, `-z`, `-v`, and `-h` flags:
 
 ```bash
-rsync -azvh cli_workshop/ /tmp/backups/
+rsync -azvh command_line_curriculum/ /tmp/backups/
 ```
 This will synchronize the directory. If you run this command a second time nothing happens. Let's add a new file named `newfile.txt`
 
 ```bash
-touch cli_workshop/newfile.txt /tmp/backups/
-rsync -azvh cli_workshop/ /tmp/backups/
+touch command_line_curriculum/newfile.txt /tmp/backups/
+rsync -azvh command_line_curriculum/ /tmp/backups/
 ```
 unlike a `cp` command the `rsync` will only send `newfile.txt` to the destination.
 

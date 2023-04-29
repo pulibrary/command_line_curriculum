@@ -17,15 +17,15 @@ Tar unlike most Unix commands does not require the `-` before the options. Here 
 * `f` : Use a tar file 
 * `z` : compress the file using (gzip(1))
 
-As an example let's create a tar file or everything under ~/Desktop.
+As an example let's create a tar file of everything under ~/Desktop.
 
 ```bash
 cd ~
-tar cvpf /tmp/cli_workshop.tar ~/cli_workshop/
+tar cvpf /tmp/command_line_curriculum.tar ~/command_line_curriculum/
 ```
 This file can then be shared and untarred with
 
 ```bash
-tar xvpf /tmp/cli_workshop.tar 
+tar xvpf /tmp/command_line_curriculum.tar 
 ```
 on another computer and have the same contents.
