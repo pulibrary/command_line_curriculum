@@ -1,6 +1,6 @@
 ## sftp: Secure File Transport Protocol
 
-`sftp` is the secure method for transferring files between computers. If security doesn't matter most of the command used in this section can be used with `ftp`. The format of the `sftp` command is:
+`sftp` is the secure method for transferring files between computers. If security doesn't matter most of the commands used in this section can be used with `ftp`. The format of the `sftp` command is:
 
 ```bash
 sftp hostname
