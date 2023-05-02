@@ -20,7 +20,7 @@ The `cat` command for that would be:
 cat ~/command_line_curriculum/data_files/bike_rides.csv
 ```
 
-In the same way that we used the `cut` command we can list the first field of our JSON example file anf the first and second field.
+In the same way that we used the `cut` command we can list the first field of our JSON example file and the first and second field.
 
 ```bash
 jq '.trip_id' ~/command_line_curriculum/data_files/bike_rides.json
