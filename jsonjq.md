@@ -8,7 +8,7 @@ Install the tool with the following command:
 sudo apt -y install jq
 ```
 
-In the same way that we used the `cat` command. We can view our example json data with:
+In the same way that we used the `cat` command, we can view our example json data with:
 
 ```bash
 jq . ~/command_line_curriculum/data_files/bike_rides.json
