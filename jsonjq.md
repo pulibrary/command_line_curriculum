@@ -65,7 +65,7 @@ We can do the same with `jq` with:
 jq -s length ~/command_line_curriculum/data_files/bike_rides.json
 ```
 
-We seen how the `sort` command allows you to sort a file with:
+We've seen how the `sort` command allows you to sort a file with:
 
 ```bash
 sort ~/command_line_curriculum/data_files/bike_rides.csv
