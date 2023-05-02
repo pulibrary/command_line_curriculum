@@ -1,6 +1,6 @@
 ## jq: sed for JSON
 
-`jq` is a command-line tool for processing JSON in every imaginable way; its website describes it as the `sed` of the JSON world. In the next section we will look at comparable ways of standard command-line utilities and show how then can easily be replicated with `jq`
+`jq` is a command-line tool for processing JSON in every imaginable way; its website describes it as the `sed` of the JSON world. In the next section we will look at comparable ways of standard command-line utilities and show how they can easily be replicated with `jq`
 
 Install the tool with the following command:
 
