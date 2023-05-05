@@ -15,7 +15,7 @@ cpanm install Catmandu::MARC
 cpanm install Catmandu::XLS
 ```
 
-We will look at catmandu a data processing toolkit. For the purposes of this workshop we will walk through processing data following the project's advent calendar examples:
+We will look at Catmandu, a data processing toolkit. For the purposes of this workshop we will walk through processing data following the project's advent calendar examples:
 
 ```bash
 cat ~/command_line_curriculum/data_files/weather.json
