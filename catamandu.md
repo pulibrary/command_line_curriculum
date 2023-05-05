@@ -57,7 +57,7 @@ append(main.temp," degrees Kelvin")
 
 ### catmandu JSON paths
 
-From the previous sessions we know many commands how to examine data set. For instance, to get a quick overview of the content of `verbannte-buecher.json` we can use the `cat` command:
+From the previous sessions we know many commands for how to examine data set. For instance, to get a quick overview of the content of `verbannte-buecher.json` we can use the `cat` command:
 
 ```bash
 cat ~/command_line_curriculum/data_files/rows.json
