@@ -83,7 +83,7 @@ We also learned some fixes to retrieve information out of the JSON file like `re
 
 In this session we delve a bit deeper into ways for how to point to fields in a JSON file.
 
-This `main.temp` is called a JSON Path and points to a part of the JSON data you are interested in. The data, is structured like a tree. There are top level simple fields like: `data,meta` which contain only text values or numbers. There are also fields within the `data` coord that contain a deeper structure.
+This `main.temp` is called a JSON Path and points to a part of the JSON data you are interested in. The data is structured like a tree. There are top level simple fields like: `data,meta` which contain only text values or numbers. There are also fields within the `data` coord that contain a deeper structure.
 
 Using a JSON path you can point to every part of the JSON file using a dot-notation. For simple top level fields the path is just the name of the field:
 
