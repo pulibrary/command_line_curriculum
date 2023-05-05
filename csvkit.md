@@ -181,7 +181,7 @@ The `acquisition_cost` column is type "float" (number including a decimal). We s
 
 Lastly, the `ship_date` column shows us that the earliest data is from ``1984`` and the latest from `2054`. From this we know that there is invalid data for at least one value, since presumably the equipment being shipped does not include time travel devices. We may also note that an unusually large amount of equipment was shipped in April, 2013.
 
-As a journalist, this quick glance at the data gave me a tremendous amount of information about the dataset. Although we have to be careful about assuming to much from this quick glance (always double-check the numbers!) it can be an invaluable way to familiarize yourself with a new dataset.
+As a journalist, this quick glance at the data gave me a tremendous amount of information about the dataset. Although we have to be careful about assuming too much from this quick glance (always double-check the numbers!) it can be an invaluable way to familiarize yourself with a new dataset.
 
 ### csvgrep: find the data you need
 
