@@ -126,7 +126,7 @@ Now at first the output of `csvlook` isn't going to appear very promising. You'l
 csvcut -n data.csv
 ```
 
-As you'll can see, our dataset has fourteen columns. Let's take a look at just columns ``2``, ``5`` and ``6``:
+As you can see, our dataset has fourteen columns. Let's take a look at just columns ``2``, ``5`` and ``6``:
 
 ```bash
 csvcut -c 2,5,6 data.csv
