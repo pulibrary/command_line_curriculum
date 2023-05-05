@@ -32,7 +32,7 @@ catmandu convert JSON --fix 'retain_field(name)' to YAML < ~/command_line_curric
 ```
 The –fix option in `catmandu` is used to ‘massage’ the input weather.json filtering fields we would like to see. Only one fix was used ‘retain_field’, which throws away all the data from the input except the ‘name’ field. By the way, the file weather.json wasn’t changed! We only read the file and displayed the output of `catmandu` command.
 
-The temperature in Gent is the in ‘temp’ part of the ‘main’ section in weather.json. To filter this out we need two retain_field fixes: one for the main section, one for the temp section:
+The temperature in Gent is in the ‘temp’ part of the ‘main’ section in weather.json. To filter this out we need two retain_field fixes: one for the main section, one for the temp section:
 
 ```bash
 catmandu convert JSON --fix 'retain_field(main); retain_field(main.temp)' to YAML < ~/command_line_curriculum/data_files/weather.json
