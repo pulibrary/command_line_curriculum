@@ -169,5 +169,5 @@ remove_field(record)
 ```bash
 catmandu convert MARC --fix myfixes.txt to CSV < ~/command_line_curriculum/data_files/ebook.mrc
 ```
-In the fix above we mapped the 245-field to the title. The ISBN is in the 020-field. Because MARC records can contain one or more 020 fields we created an isbn array using the `isbn.$append` syntax. Next we turned the isbn array back into a comma separated string using the `join_field` fix. As last step we deleted all the fields we didn’t need in the output with the `remove_field` syntax.
+In the fix above we mapped the 245-field to the title. The ISBN is in the 020-field. Because MARC records can contain one or more 020 fields we created an isbn array using the `isbn.$append` syntax. Next we turned the isbn array back into a comma separated string using the `join_field` fix. As a last step we deleted all the fields we didn’t need in the output with the `remove_field` syntax.
 
