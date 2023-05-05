@@ -25,7 +25,7 @@ We will convert this into human friendly YAML using catmandu with:
 ```bash
 catmandu convert JSON to YAML < ~/command_line_curriculum/data_files/weather.json
 ```
-Catmandu can be used to process structured information like the UNIX `grep` command can process unstructured information. For instance lets try to filter out the name of this report. Type in this command:
+Catmandu can be used to process structured information like the UNIX `grep` command can process unstructured information. For instance let's try to filter out the name of this report. Type in this command:
 
 ```bash
 catmandu convert JSON --fix 'retain_field(name)' to YAML < ~/command_line_curriculum/data_files/weather.json
