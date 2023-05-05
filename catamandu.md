@@ -105,7 +105,7 @@ We've looked at JSON data in brief. We will now look at MARC data by running the
 ```bash
 cat ~/command_line_curriculum/data_files/ebook.mrc
 ```
-Like JSON the MARC file contains structured data but the format is different. All the data is on one line, but there isn’t at first sight a clear separation between fields and values. The field/value structure there but you need to use a MARC parser to extract this information. Catmandu contains a MARC parser which can be used to interpret this file. Type the following command to transform the MARC data into YAML:
+Like JSON the MARC file contains structured data but the format is different. All the data is on one line, but there isn’t at first sight a clear separation between fields and values. The field/value structure is there but you need to use a MARC parser to extract this information. Catmandu contains a MARC parser which can be used to interpret this file. Type the following command to transform the MARC data into YAML:
 
 ```bash
 catmandu convert MARC to YAML < ~/command_line_curriculum/data_files/ebook.mrc
