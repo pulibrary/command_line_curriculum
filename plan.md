@@ -5,7 +5,6 @@
       * [emacs](sec3/emacs.md)
       * [nano](sec3/nano.md) 
       * [Vim](sec3/vim.md)
-      * [micro](sec3/micro.md)
       * [sed](sec3/sed.md)
       * [vi](sec3/vi.md)
   2. [C Shell Interface](c_shell_interface.md)
