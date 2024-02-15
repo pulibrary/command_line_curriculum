@@ -12,7 +12,7 @@ Besides terminals, we can take advantage of terminal multiplexers. We use [tmux]
 
 To use a Unix/Linux system you must log in to the computer/server, which requires a **login name** and **password**. It is important to remember that Unix is a case-sensitive system. Both login names and passwords will treat an uppercase letter and a lowercase letter as different.
 
-Log in to your virtual machine with `ssh pulsys@sandbox-<yournetid>.lib.princeton.edu` (for those at PUL where the login name is `pulsys` and the password is your public keys)
+Log in to your virtual machine with `ssh netid@sandbox-<yournetid>.lib.princeton.edu` 
 
 For every one else enter the user name of your system at the login prompt and press return.
 
@@ -52,7 +52,7 @@ The following additional packages will be installed:
 
 ![login_window](images/login_window.png)
 
-Opening a terminal will start a new shell session. We are then given access to a command line to execute commands. The beginning of the command line before the cursor is known as the command prompt (the [`pulsys@sandbox-tw8766 ~$`] in the picture). The attached image is what users at PUL will see this. Others will will have `user@laptop`
+Opening a terminal will start a new shell session. We are then given access to a command line to execute commands. The beginning of the command line before the cursor is known as the command prompt (the [`tw8766@sandbox-tw8766 ~$`] in the picture). The attached image is what users at PUL will see this. Others will will have `user@laptop`
 
 Typically, the following is displayed:
   * The user name of the user running the shell. The user affects all executed commands, as they will be run within this user’s permissions.
