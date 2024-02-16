@@ -12,7 +12,7 @@ Besides terminals, we can take advantage of terminal multiplexers. We use [tmux]
 
 To use a Unix/Linux system you must log in to the computer/server, which requires a **login name** and **password**. It is important to remember that Unix is a case-sensitive system. Both login names and passwords will treat an uppercase letter and a lowercase letter as different.
 
-Log in to your virtual machine with `ssh netid@sandbox-<yournetid>.lib.princeton.edu` 
+Log in to your virtual machine with `ssh <yournetid>@sandbox-<yournetid>.lib.princeton.edu` 
 
 For every one else enter the user name of your system at the login prompt and press return.
 
