@@ -1,20 +1,22 @@
 ## Your Unix Environment 
 
-In the [Last Section](login.md) we logged into our Unix/Linux computer (server) and had a very high overview of how to get help. We will look at shells in the section. Our focus for the rest of the workshop will be on using the [Zsh](https://zsh.sourceforge.io/) Shell. 
+In the [Last Section](login.md) we logged into our Unix/Linux computer (server) and had a very high overview of how to get help. We also discussed the shell, which to review, is the interface that we use to interact with operating systems. Popular shells include: 
 
-To be sure you are running the `zsh` and/or that your computer (server) has the shell run the following commands:
+• Bourne Again SHell (Bash): Used at PUL for virtual machines
+• Z shell (Zsh): Default shell on MacOS
+• C shell (csh): Interface to Unix systems
+• Command Prompt (CMD): Windows shell 
 
-```zsh
-chsh -s $(which zsh)
+To find out what shell you are running on your computer (server), run the following command:
+
+```ps -p $$
 ```
+The steps above will display the process ID number (pid) of your currnet processes, and your shell is one of those processes. You should get output that looks similar to this: 
 
-The steps above involve command substitution which is used to replace which zsh with its result. `which` finds the path to Zsh. If Zsh is installed, it will be set as the default shell.
+```PID TTY           TIME CMD
+46535 ttys000    0:00.32 -zsh```
 
-You will be prompted for your login password in order for this to complete. If this fails install the Zshell with the following command:
-
-```zsh
-sudo apt -y install zsh
-```
+The CMD column is your shell, which in this example, is Zsh. 
 
 All shells have startup files or startup scripts that are executed as soon as a new shell session starts. The following example demonstrates how a startup script can look like. Please note that this example expects [Oh My Zsh](https://ohmyz.sh/) to be installed.
 
