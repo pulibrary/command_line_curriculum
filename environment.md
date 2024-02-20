@@ -14,7 +14,8 @@ To find out what shell you are running on your computer (server), run the follow
 The steps above will display the process ID number (pid) of your currnet processes, and your shell is one of those processes. You should get output that looks similar to this: 
 
 ```PID TTY           TIME CMD
-46535 ttys000    0:00.32 -zsh```
+46535 ttys000    0:00.32 -zsh
+```
 
 The CMD column is your shell, which in this example, is Zsh. 
 
