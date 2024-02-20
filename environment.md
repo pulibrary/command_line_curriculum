@@ -2,31 +2,22 @@
 
 In the [Last Section](login.md) we logged into our Unix/Linux computer (server) and had a very high overview of how to get help. We also discussed the shell, which to review, is the interface that we use to interact with operating systems. Popular shells include: 
 
-
 - Bourne Again SHell ([https://www.gnu.org/software/bash/]) (Bash): Used at PUL for virtual machines
-
-
 - Z shell ([https://zsh.sourceforge.io/]) (Zsh): Default shell on MacOS
-
-
 - C shell ([https://www.ibm.com/docs/en/aix/7.2?topic=shells-c-shell])(csh): Interface to Unix systems
-
-
 - Command Prompt ([https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands])(CMD): Windows shell 
-
 
 To find out what shell you are running on your computer (server), run the following command:
 
-```ps -p $$```
+```
+ps -p $$
+```
 
 The steps above will display the process ID number (pid) of your currnet processes, and your shell is one of those processes. You should get output that looks similar to this: 
 
 ```
- PID         TTY           TIME       CMD
+ PID     TTY         TIME      CMD
  46535   ttys000     0:00.32   -zsh
- ```
- ```
- 46535 ttys000    0:00.32 -zsh
  ```
 
 The CMD column is your shell, which in this example, is Zsh. 
@@ -36,12 +27,12 @@ All shells have startup files or startup scripts that are executed as soon as a 
 Zsh shells stores the startup file in the user’s home directory at `~/.zshrc`. The script itself is just a file with commands written on new lines.
 
 In startup scripts, we usually want to:
-• Set shell settings (called options)
-• Export environment variables
-• Configure the prompt
-• Change themes
-• Set up custom aliases
-• Define custom functions
+- Set shell settings (called options)
+- Export environment variables
+- Configure the prompt
+- Change themes
+- Set up custom aliases
+- Define custom functions
 
 *Example ~/.zshrc file*
 
