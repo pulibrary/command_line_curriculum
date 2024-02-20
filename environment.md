@@ -5,7 +5,7 @@ In the [Last Section](login.md) we logged into our Unix/Linux computer (server) 
 - [Bourne Again SHell (Bash)](https://www.gnu.org/software/bash/): Used at PUL for virtual machines
 - [Z shell (Zsh)](https://zsh.sourceforge.io/): Default shell on MacOS
 - [C shell (csh)](https://www.ibm.com/docs/en/aix/7.2?topic=shells-c-shell): Interface to Unix systems
-- Command Prompt ([https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands])(CMD): Windows shell 
+- [Command Prompt (CMD)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands): Windows shell 
 
 To find out what shell you are running on your computer (server), run the following command:
 
