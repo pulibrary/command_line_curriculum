@@ -2,10 +2,10 @@
 
 In the [Last Section](login.md) we logged into our Unix/Linux computer (server) and had a very high overview of how to get help. We also discussed the shell, which to review, is the interface that we use to interact with operating systems. Popular shells include: 
 
-• Bourne Again SHell (Bash): Used at PUL for virtual machines
-• Z shell (Zsh): Default shell on MacOS
-• C shell (csh): Interface to Unix systems
-• Command Prompt (CMD): Windows shell 
+• Bourne Again SHell ([https://www.gnu.org/software/bash/]) (Bash): Used at PUL for virtual machines
+• Z shell ([https://zsh.sourceforge.io/]) (Zsh): Default shell on MacOS
+• C shell ([https://www.ibm.com/docs/en/aix/7.2?topic=shells-c-shell])(csh): Interface to Unix systems
+• Command Prompt ([https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands])(CMD): Windows shell 
 
 To find out what shell you are running on your computer (server), run the following command:
 
@@ -18,7 +18,7 @@ The steps above will display the process ID number (pid) of your currnet process
 
 The CMD column is your shell, which in this example, is Zsh. 
 
-All shells have startup files or startup scripts that are executed as soon as a new shell session starts. The following example demonstrates how a startup script can look like. Please note that this example expects [Oh My Zsh](https://ohmyz.sh/) to be installed.
+All shells have startup files or startup scripts that are executed as soon as a new shell session starts. The following example demonstrates what a startup script can look like. In this workshop, we are using the Z shell (Zsh) and the below example expects [Oh My Zsh](https://ohmyz.sh/) to be installed.
 
 Zsh shells stores the startup file in the user’s home directory at `~/.zshrc`. The script itself is just a file with commands written on new lines.
 
@@ -54,7 +54,7 @@ frameworks like [Oh My BASH](https://ohmybash.nntoan.com/) and [Bash-it](https:/
 
 ## Oh my Zsh (optional)
 
-Understanding that customization is personal. I am recommending at the very least installing the Oh My Zsh for the rest of this workshop.
+Customization is a personal choice. However, for the rest of this workshop, I am recommending at the very least installing the Oh My Zsh.
 
 **Pre-requisites**
 
