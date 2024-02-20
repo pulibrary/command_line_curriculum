@@ -96,7 +96,7 @@ echo $my_variable
 ## Environment Variables
 
 
-Process environment variables (also referred to env vars) are not the same as shell variables we just described. They are configuration variables that every process has in Unix-like operating systems. A shell session a process that receives env vars from the system when it is run. The shell imports them at startup time as regular variables and marks them as exported.
+Process environment variables (also referred to env vars) are not the same as shell variables we just described. They are configuration variables that every process has in Unix-like operating systems. A shell session is a process that receives env vars from the system when it is run. The shell imports them at startup time as regular variables and marks them as exported.
 
 
 Every variable marked as exported will be copied into the process environment of
@@ -173,7 +173,7 @@ uname -a
 
 Use the manual or any online tools from the [last section](login.md) to determine what the results mean.
 
-Let's find out what how long our system has been running. This used to be a source of pride for many a system administrator:
+Let's find out how long our system has been running. This used to be a source of pride for many a system administrator:
 
 ```zsh
 uptime
