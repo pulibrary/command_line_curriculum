@@ -2,7 +2,9 @@
 
 In the [Last Section](login.md) we logged into our Unix/Linux computer (server) and had a very high overview of how to get help. We also discussed the shell, which to review, is the interface that we use to interact with operating systems. Popular shells include: 
 
-• Bourne Again SHell ([https://www.gnu.org/software/bash/]) (Bash): Used at PUL for virtual machines
+
+- Bourne Again SHell ([https://www.gnu.org/software/bash/]) (Bash): Used at PUL for virtual machines
+
 • Z shell ([https://zsh.sourceforge.io/]) (Zsh): Default shell on MacOS
 • C shell ([https://www.ibm.com/docs/en/aix/7.2?topic=shells-c-shell])(csh): Interface to Unix systems
 • Command Prompt ([https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands])(CMD): Windows shell 
