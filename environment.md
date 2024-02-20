@@ -8,7 +8,9 @@ In the [Last Section](login.md) we logged into our Unix/Linux computer (server) 
 
 - Z shell ([https://zsh.sourceforge.io/]) (Zsh): Default shell on MacOS
 
-• C shell ([https://www.ibm.com/docs/en/aix/7.2?topic=shells-c-shell])(csh): Interface to Unix systems
+
+- C shell ([https://www.ibm.com/docs/en/aix/7.2?topic=shells-c-shell])(csh): Interface to Unix systems
+
 • Command Prompt ([https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands])(CMD): Windows shell 
 
 To find out what shell you are running on your computer (server), run the following command:
