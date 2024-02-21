@@ -1,32 +1,38 @@
 ## Your Unix Environment 
 
-In the [Last Section](login.md) we logged into our Unix/Linux computer (server) and had a very high overview of how to get help. We will look at shells in the section. Our focus for the rest of the workshop will be on using the [Zsh](https://zsh.sourceforge.io/) Shell. 
+In the [Last Section](login.md) we logged into our Unix/Linux computer (server) and had a very high overview of how to get help. We also discussed the shell, which to review, is the interface that we use to interact with operating systems. Popular shells include: 
 
-To be sure you are running the `zsh` and/or that your computer (server) has the shell run the following commands:
+- [Bourne Again SHell (Bash)](https://www.gnu.org/software/bash/): Used at PUL for virtual machines
+- [Z shell (Zsh)](https://zsh.sourceforge.io/): Default shell on MacOS
+- [C shell (csh)](https://www.ibm.com/docs/en/aix/7.2?topic=shells-c-shell): Interface to Unix systems
+- [Command Prompt (CMD)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands): Windows shell 
 
-```zsh
-chsh -s $(which zsh)
+To find out what shell you are running on your computer (server), run the following command:
+
+```
+ps -p $$
 ```
 
-The steps above involve command substitution which is used to replace which zsh with its result. `which` finds the path to Zsh. If Zsh is installed, it will be set as the default shell.
+The steps above will display the process ID number (pid) of your currnet processes, and your shell is one of those processes. You should get output that looks similar to this: 
 
-You will be prompted for your login password in order for this to complete. If this fails install the Zshell with the following command:
-
-```zsh
-sudo apt -y install zsh
 ```
+ PID     TTY         TIME      CMD
+ 46535   ttys000     0:00.32   -zsh
+ ```
 
-All shells have startup files or startup scripts that are executed as soon as a new shell session starts. The following example demonstrates how a startup script can look like. Please note that this example expects [Oh My Zsh](https://ohmyz.sh/) to be installed.
+The CMD column is your shell, which in this example, is Zsh. 
+
+All shells have startup files or startup scripts that are executed as soon as a new shell session starts. The following example demonstrates what a startup script can look like. In this workshop, we are using the Z shell (Zsh) and the below example expects [Oh My Zsh](https://ohmyz.sh/) to be installed.
 
 Zsh shells stores the startup file in the user’s home directory at `~/.zshrc`. The script itself is just a file with commands written on new lines.
 
 In startup scripts, we usually want to:
-• Set shell settings (called options)
-• Export environment variables
-• Configure the prompt
-• Change themes
-• Set up custom aliases
-• Define custom functions
+- Set shell settings (called options)
+- Export environment variables
+- Configure the prompt
+- Change themes
+- Set up custom aliases
+- Define custom functions
 
 *Example ~/.zshrc file*
 
@@ -52,7 +58,7 @@ frameworks like [Oh My BASH](https://ohmybash.nntoan.com/) and [Bash-it](https:/
 
 ## Oh my Zsh (optional)
 
-Understanding that customization is personal. I am recommending at the very least installing the Oh My Zsh for the rest of this workshop.
+Customization is a personal choice. However, for the rest of this workshop, I am recommending at the very least installing the Oh My Zsh.
 
 **Pre-requisites**
 
@@ -90,7 +96,7 @@ echo $my_variable
 ## Environment Variables
 
 
-Process environment variables (also referred to env vars) are not the same as shell variables we just described. They are configuration variables that every process has in Unix-like operating systems. A shell session a process that receives env vars from the system when it is run. The shell imports them at startup time as regular variables and marks them as exported.
+Process environment variables (also referred to env vars) are not the same as shell variables we just described. They are configuration variables that every process has in Unix-like operating systems. A shell session is a process that receives env vars from the system when it is run. The shell imports them at startup time as regular variables and marks them as exported.
 
 
 Every variable marked as exported will be copied into the process environment of
@@ -167,7 +173,7 @@ uname -a
 
 Use the manual or any online tools from the [last section](login.md) to determine what the results mean.
 
-Let's find out what how long our system has been running. This used to be a source of pride for many a system administrator:
+Let's find out how long our system has been running. This used to be a source of pride for many a system administrator:
 
 ```zsh
 uptime
