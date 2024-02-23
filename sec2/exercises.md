@@ -2,7 +2,7 @@
 
 The following exercises should help you feel comfortable manipulating files and creating and navigating directories on the command line. Instead of creating files and folders on your Desktop, for example, we will do this via the command line. 
 
-# Scenario
+### Scenario
 
 It's the end of the term and your Desktop is a mess! Let's organize your course files so that you can find them more easily in the future. 
 
