@@ -1,6 +1,6 @@
   1. [Getting In and Out of the System](login.md)
   1. [Variables and Environment Variables](environment.md)
-  1. [File and directories] (file_and_directory.md)
+  1. [File and directories](https://github.com/pulibrary/command_line_curriculum/blob/main/sec2/files_and_directory.md)
       * [exercises](sec2/exercises.md)
   1. [Editing Files](editing_files.md)
       * [emacs](sec3/emacs.md)
