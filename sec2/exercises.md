@@ -29,7 +29,7 @@ The following exercises should help you feel comfortable manipulating files and 
 
 12. Go back to your home directory and check that everything is now where you’ve placed it. 
 
-13. You realized that recipe2.txt is a blank file. Delete it from the directory.
+13. You realized that ```recipe2.txt``` is a blank file. Delete it from the directory.
 
 14. Now that you're finished, you want to make sure there is at least one copy of each file in its original directory. 
 
