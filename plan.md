@@ -1,6 +1,6 @@
   1. [Getting In and Out of the System](login.md)
   1. [Variables and Environment Variables](environment.md)
-  1. [File and directories]
+  1. [File and directories] (file_and_directory.md)
       * [exercises](sec2/exercises.md)
   1. [Editing Files](editing_files.md)
       * [emacs](sec3/emacs.md)
