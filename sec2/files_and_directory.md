@@ -423,7 +423,7 @@ The `cd` command changes the current directory where you are located. It uses th
 cd directoryname
 ```
 
-If no `directoryname` is specified your current directory becomes your home directory. The `directoryname` can be an absolute of relative path. A few examples are
+If no `directoryname` is specified your current directory becomes your home directory. The `directoryname` can be an absolute or relative path. A few examples are
 
 ```bash
 pulsys@sandbox-tw8766 ~$ cd
