@@ -1,6 +1,6 @@
 # C Shell Interface
 
-The C shell (csh) is the interface to the Unix system and is responsible for interpreting your keyboard input. When you log into a Unix system, the shell is started and runs until your log out of the system. The shell is a powerful program allowing:
+The C shell (csh) is the interface to the Unix system and is responsible for interpreting your keyboard input. When you log into a Unix system, the shell is started and runs until you log out of the system. The shell is a powerful program allowing:
 
 1. Connection of the output of one command as input to a second command
 1. The output of commands to be sent to files
