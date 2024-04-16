@@ -70,7 +70,7 @@ alias newname='command statement'
 For example instead of typing `ls -al && pwd` which would list all the files in our current working directory we can create an `alias` for that with:
 
 ```bash
-alias whereami='ls al && pwd'
+alias whereami='ls -al && pwd'
 ```
 after that every time we type the command `whereami` it would display the same results of the two commands `ls -al` and `pwd`. `alias` is used on commands that a user uses frequently.
 
