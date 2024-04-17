@@ -30,11 +30,11 @@ The C shell interprets the following symbols as the file redirection symbols:
 * `>>` : Append standard output to the file
 * `>&` : Write both standard error and standard output to the file
 
-We can sort the contents of `library-visits.csv` and put the output into a file called `sorted.csv`
+We can sort the contents of `libraries-visits.csv` and put the output into a file called `sorted.csv`
 
 ```bash
 cd ~
-sort < command_line_curriculum/data_files/library-visits.csv > sorted.csv
+sort < command_line_curriculum/data_files/libraries-visits.csv > sorted.csv
 in2csv command_line_curriculum/data_files/Evidovane-knihovny.xls > converted_file.csv
 ```
 
