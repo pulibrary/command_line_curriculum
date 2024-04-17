@@ -34,8 +34,8 @@ We can sort the contents of `library-visits.csv` and put the output into a file 
 
 ```bash
 cd ~
-sort < cli_workshop/data_files/library-visits.csv > sorted.csv
-in2csv cli_workshop/data_files/Evidovane-knihovny.xls > converted_file.csv
+sort < command_line_curriculum/data_files/library-visits.csv > sorted.csv
+in2csv command_line_curriculum/data_files/Evidovane-knihovny.xls > converted_file.csv
 ```
 
 ### pipes
@@ -57,7 +57,7 @@ More than one pipe is allowed. To skip CSV header, get 1 column, sort names, get
 
 ```bash
 cd ~
-sed '1d' cli_workshop/data_files/libraries-visits.csv | cut -d',' -f 1 | sort | uniq
+sed '1d' command_line_curriculum/data_files/libraries-visits.csv | cut -d',' -f 1 | sort | uniq
 ```
 
 ### aliasing command names
@@ -113,7 +113,7 @@ Typing
 
 # Exercises
 
-1. Get the file from `~/cli_workshop/names.txt` and after reading the manual, sort those names alphabetically.
+1. Get the file from `~/command_line_curriculum/names.txt` and after reading the manual, sort those names alphabetically.
 1. If a user logs into a Unix system and types the following input to the shell, list the commands executed by the shell for each of the history substitutions:
 
 ```bash
