@@ -4,7 +4,7 @@
       * [exercises](sec2/exercises.md)
   1. [Editing Files](editing_files.md)
       * [emacs](sec3/emacs.md)
-      * [nano](sec3/nano.md) 
+      * [nano](sec3/nano.md)
       * [Vim](sec3/vim.md)
       * [sed](sec3/sed.md)
       * [vi](sec3/vi.md)
