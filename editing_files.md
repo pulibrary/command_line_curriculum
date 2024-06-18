@@ -10,7 +10,8 @@ A somewhat religious war has raged for decades in certain circles on the topic o
 
 The first unix editor, `ed`, is a line-oriented editor that allows you to interact with one line at a time, rather than a full document all at once. It is almost never used now, so we don't cover it, but it was influential in the design of `vim`/`vim` and `sed`, both of which are covered in this material.
 
-In this segment we will use `micro/nano`, `vi/vim/Neovim`, and `mg/emacs` text Editors to manipulate files. Familiarity with all of them I feel is worth it.
+In this segment we will use `micro/nano`, `vi/vim/Neovim`, and `mg/emacs` text Editors to manipulate files. Familiarity with all of them I feel is worth it. `sed` is a stream editor that can be useful for bulk operations or within a pipe chain, and it is also briefly introduced.
+
 * [nano](sec3/nano.md)
 * [emacs](sec3/emacs.md)
 * [vi](sec3/vi.md)
