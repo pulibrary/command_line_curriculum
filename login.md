@@ -74,7 +74,7 @@ pwd
 /home/<yourusername>
 ```
 
-A command like this seems straightforward, but it is not. The problem is that `pwd` can run a script, an executable binary, a custom shell function, an alias, or a shell built-in (built-ins are utilities implemented directly in the shell itself). We will see all of those things in action later. 
+A command like this seems straightforward, but it is not. The problem is that `pwd` can be a script, an executable binary, a custom shell function, an alias, or a shell built-in (built-ins are utilities implemented directly in the shell itself). We will see all of those things in action later. 
 
 The easiest way to do that is with the command `type -a pwd`. It will print all executable things named pwd.
 
