@@ -175,6 +175,8 @@ There's a new implementation of `cat` (short for concatenate) written in the [Ru
 sudo apt -y install bat
 ```
 
+Upon installing the software above, note that the installed application uses `batcat` and not bat [as one would expect](https://www.linode.com/docs/guides/how-to-install-and-use-the-bat-command-on-linux/). 
+
 #### cp: Copy Files
 
 The `cp` command copies files. The Format of the `cp` command is:
