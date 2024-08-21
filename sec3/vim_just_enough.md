@@ -1,80 +1,37 @@
+## Just Enough Vim
 
-## vi
+This guide focuses on giving you basic background information about Vim, and just enough Vim knowledge to write a git commit message.
 
-The `vi` is a modal editor comes with two huge advantages.
+### About Vim
+
+Vim is a modal editor. This means that instead of holding down the control or
+option key every time you want to issue a command, you instead enter **normal
+mode** (aka command mode) and then issue as many commands as you like. Then when you want to type
+again, you enter **insert mode**. Examples of commands include moving the cursor
+around, or saving the file and exiting Vim. There are a couple other modes, but command mode and insert mode are the most important.
+
+People who really like Vim find that once you grow proficient in its modes and
+controls you can work very quickly.
+
+For casual use Vim has two big advantages:
 
 1. You will find it in every Unix system
-2. By default has a very small cpu, memory footprint to edit files. 
+2. By default has a very small cpu, memory footprint to edit files.
 
-The format of the `vi` command is:
+### Writing a commit message in Vim
 
-```bash
-vi command
-```
-The `vi` editor has two common modes. They are *insert mode* where the characters you type are inserted into the file, and *command mode*, where the characters you type are commands for the `vi` editor to execute. `vi` starts up in command mode. To get into insert mode type `i`. The `ESC` key goes from insert mode to command mode.
+This section is optional, and intended to give exposure to a very small set of extremely useful vim commands, using a git commit message as an example. If you're not using git in your current environment, move on to sec3/vim_all_the_things.md.
 
-### movement commands
+On many machines Vim is the default editor. If it's not the default editor on your machine, you can temporarily make it the default editor by typing `export EDITOR=vim`. This will make vim the default editor for a single shell session. Then if you use that shell session to create a git commit, vim will open so that you can create the message.
 
-The following commands allow movement when editing your file.
+Vim opens in normal mode. If you are in any other mode you can return to
+normal mode by pressing the `ESC` key or `ctrl+c`.
 
-_Screen Movement_
-
-* `cntl-U`: Scroll up
-* `cntl-D`: Scroll down
-* `cntl-F`: Scroll forward
-* `cntl-B`: Scroll backward
-
-_Line Movement_
-
-* `j`: Move down one line
-* `k`: Move up one line
-* `H`: Move to the first line on the screen
-* `M`: Move to the middle line on the screen
-* `L`: Move to the last line on the screen
-* `h`: Move left one character
-* `l`: Move right one character
-* `^`: Move to the beginning of a line
-* `$`: Move to the end of a line
-* `k`: Go to like `k`
-* `G`: Go to the end of the file
-* `.`: Repeat the last edit (change, deletion) command
-
-### deletion and insertion commands
-
-_Deletion Commands_
-
-* `ndd`: Delete next `n` lines
-* `nx`: Delete next `n` characters
-* `nX`: Delete previous `n` characters
-* `D`: Delete from current position to end of line
-
-Typing a `d` followed by any movement command deletes text in the area from the current position to the new position. For example, `dG` deletes to the end of the file. A `d$` deletes to the end of the line.
-The last text you deleted is stored in a deleted text buffer. This deleted text can be inserted back into the document by using the `p` command.
-To move text, delete the text that you want moved, move your cursor to where you want it placed, and type `p` to insert the text. To duplicate text, delete the text, type `p` to yank it back, move your cursor where you want the duplicate to appear and type a `p` a second time.
-
-### saving and inserting files
-
-The following commands are associated with saving edited information to a file. All of them except `ZZ` must be ended by typing the return key.
-
-* `:w` : Write buffer back to file
-* `:w examplefile` : Write buffer to examplefile
-* `:w! examplefile` : Write buffer to examplefile even if it already exists
-* `:q` : Quit window (more on this in [Neovim](neovim.md))
-* `:q!` : Quit but discard changes
-* `ZZ` : Save buffer and exit
-* `:r newfile`: Insert file in the buffer
-* `:e otherfile`: Edit a new file
-
-### searching
-
-These commands search for a string. The return key must be pressed after both these commands:
-
-* `/string`: Forward search
-* `?string`: Backward search
-
-To continue searching:
-
-* `n`: Searches for the next occurrence of the string
-* `N`: Reverses the direction and searches for the next occurence
-
-There's more to vi that would be a workshop in and of itself. This should allow a user to be able to create modify files.
+Here are some steps you can follow:
+* `O`: When Vim opens to you to create your commit message, you'll want to enter insert mode. `O` will enter insert mode by opening a new line above the one you're currently on, which likely already has some text on it.
+* Now you're in insert mode. Type your commit message!
+* `ESC`: get out of insert mode.
+* `/`, then someone's name, then `enter`: search for your co-author's name, and go to the result. Unless you've got a .vimrc that changes the default settings, search is case-sensitive.
+* `0`: move the cursor to the beginning of the line
+* `x`: delete the character to uncomment the `co-authored-by` line. hit `x` again to delete the leading space
+* `:wq`: write (save) the file and quit
