@@ -1,7 +1,5 @@
 ## vim: a Deeper Dive into vi/Vim
 
-All the steps included in the [vi](vi.md) will work in vim. We will take a deeper dive in using a modern implementation of vi in vim. We will look at
-
   * Ways to organize and open files
   * Useful motions to move around your code
   * How to create new keystrokes
@@ -125,7 +123,6 @@ To edit the files in the arglist, you can use these commands:
 ### Mapping Keystrokes
 
 Mapping keystrokes eliminates toil from repetition. Create a file called `file_extraction.txt` with the following content: 
-
 
 ```txt
 The quick brown fox jumps over the lazy dog
