@@ -16,6 +16,7 @@ In this segment we will use `micro/nano`, `vim/Neovim`, and `mg/emacs` text Edit
 * [emacs](sec3/emacs.md)
 * [Just enough vim](sec3/vim_just_enough.md)
 * [More vim](sec3/vim_all_the_things.md)
+* [Using Vim with multiple files](sec3/vim_for_multiple_files.md) - and other advanced topics
 * [sed](sec3/sed.md)
 
 
