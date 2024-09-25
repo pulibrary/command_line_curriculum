@@ -52,7 +52,7 @@ For each filename listed, if it is a file, information about that file is displa
 The `ls` command has many options associated with it. Take a look at some of them by typing:
 
 ```bash
-pulsys@sandbox-tw8766 ~$ ls --help
+ls --help
 Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
@@ -62,7 +62,7 @@ The `ls` (list) command is used to show directories and
 files. It is similar to the DIR command in Windows Command Prompt.
 
 ```bash
-pulsys@sandbox-fkayiwa:~/command_line_curriculum$ ls
+ls
 environment.md  images  LICENSE  login.md  plan.md  README.md
 ```
 
@@ -70,7 +70,7 @@ To see a more detailed listing of the files and directories, you can use
 the ls -l command, as shown below:
 
 ```bash
-pulsys@sandbox-fkayiwa:~/command_line_curriculum$ ls -l
+ls -l
 total 36
 -rw-rw-r-- 1 pulsys pulsys 4903 Aug 19 12:12 environment.md
 drwxrwxr-x 2 pulsys pulsys 4096 Aug 19 12:12 images
@@ -90,7 +90,7 @@ the file. In Linux, a file is hidden if its name starts with a period, or
 dot. To show these dot files, you use the `ls -a` command shown below:
 
 ```bash
-pulsys@sandbox-fkayiwa:~/command_line_curriculum$ ls -a
+ls -a
 .  ..  environment.md  .git  .gitignore  images  LICENSE  login.md  plan.md  README.md
 ```
 
@@ -103,7 +103,7 @@ child directory (-R), you simply combine them all (ls -alR), as
 shown below:
 
 ```bash
-pulsys@sandbox-fkayiwa:~/command_line_curriculum$ ls -alR
+ls -alR
 .:
 total 52
 drwxrwxr-x 4 pulsys pulsys 4096 Aug 19 12:12 .
@@ -153,17 +153,17 @@ sudo apt -y install exa
 The `cat`, `more` and `less` commands can be used to show the contents of a file on your terminal screen. To show the contents of the `/etc/fstab` file you can do any one of the following:
 
 ```bash
-pulsys@sandbox-tw8766 ~$ cat /etc/fstab
+cat /etc/fstab
 ```
 or
 
 ```bash
-pulsys@sandbox-tw8766 ~$ more /etc/fstab
+more /etc/fstab
 ```
 or
 
 ```bash
-pulsys@sandbox-tw8766 ~$ less /etc/fstab
+less /etc/fstab
 ```
 On files smaller than your screen `cat` and `more` work the same way; they differ on how they display files longer than the length of your terminal. 
 
@@ -191,7 +191,7 @@ cp [options] from-file(s) to-directory
 The first one copies files within the same directory while the second one copies files into another directory. Let's look at the manual for the `cp` command:
 
 ```bash
-pulsys@sandbox-tw8766 ~$ man cp
+man cp
 ```
 
 These are the frequent based on the `history` of the creator of this repo is:
@@ -203,10 +203,10 @@ These are the frequent based on the `history` of the creator of this repo is:
 Let's make a few copies of the document by launching our terminal.
 
 ```bash
-pulsys@sandbox-tw8766 ~$ ls
+ls
 command_line_curriculum
-pulsys@sandbox-tw8766 ~$ cp command_line_curriculum/data_files/22631-0.txt .
-pulsys@sandbox-tw8766 ~$ ls
+cp command_line_curriculum/data_files/22631-0.txt .
+ls
 22631-0.txt  command_line_curriculum
 ```
 In order we:
@@ -218,7 +218,7 @@ In order we:
 However, if the destination is in another directory, the named directory must already exist. Otherwise, the cp command will respond with an error:
 
 ```bash
-pulsys@sandbox-tw8766 ~$ cp command_line_curriculum/data_files/22631-0.txt gutenberg_books/22631-0.txt
+cp command_line_curriculum/data_files/22631-0.txt gutenberg_books/22631-0.txt
 cp: cannot create regular file `gutenberg_books/22631-0.txt`: No such file or directory
 ```
 
@@ -260,8 +260,8 @@ These are the frequent `mv` commands the instructor uses:
 Let's change the name of our file to something meaningful. And move it to the `training`
 
 ```bash
-pulsys@sandbox-tw8766 ~$ mv 22631-0.txt timbuctoo.txt
-pulsys@sandbox-tw8766 ~$ mv timbuctoo.txt /tmp/timbuctoo.txt
+mv 22631-0.txt timbuctoo.txt
+mv timbuctoo.txt /tmp/timbuctoo.txt
 ```
 
 #### rm: Remove Files
@@ -292,10 +292,10 @@ man touch
 
 
 ```bash
-pulsys@sandbox-tw8766 ~$ ls -l /tmp/
+ls -l /tmp/
 ...
 -rw-rw-r-- 1 pulsys pulsys    9 Jul 17 13:18 password.txt
-pulsys@sandbox-tw8766 ~$ rm -i training/password.txt
+rm -i training/password.txt
 ```
 
 
@@ -323,7 +323,7 @@ These permissions can be specified for each of the following categories:
 The `ls -l` command shows these permissions in order by user, group and others:
 
 ```bash
-pulsys@sandbox-tw8766 ~$ ls -l
+ls -l
 total 928
 -rw-rw-r-- 1 pulsys pulsys 927212 Jul 20 13:17 22631-0.txt
 drwxrwxr-x 4 pulsys pulsys   4096 Jul 19 18:35 command_line_curriculum
@@ -348,8 +348,8 @@ Category - permission to remove permission
 For example:
 
 ```bash
-pulsys@sandbox-tw8766 ~$ chmod o+w 22631-0.txt
-pulsys@sandbox-tw8766 ~$ chmod g-w 22631-0.txt
+chmod o+w 22631-0.txt
+chmod g-w 22631-0.txt
 ```
 The first command adds write permissions to anyone `22631-0.txt` and the second one removes write permissions to the `pulsys` group.
 
@@ -370,7 +370,7 @@ A value of six (4+2) allows read and write permission. A value of five (4+1) all
 For example the command:
 
 ```bash
-pulsys@sandbox-tw8766 ~$ chmod 700 22631-0.txt
+chmod 700 22631-0.txt
 ```
 
 changes the `22631-0.txt` to be executable by the user `pulsys` and no other user can do anything with the file.
@@ -380,7 +380,7 @@ changes the `22631-0.txt` to be executable by the user `pulsys` and no other use
 In multiuser systems it is often helpful to open file permissions up to other users on a filesystem. Suppose Pul Sys, wants to give all Princeton University Library access to read and write to the file, `22631-0.txt`. If those users are all part of a group called `pulibrary`, then he can give them those permissions by changing the group ownership of the file. He can handle this task with:
 
 ```bash
-pulsys@sandbox-tw8766 ~$ chown :pulibrary  22631-0.txt
+chown :pulibrary  22631-0.txt
 ```
 
 
@@ -389,7 +389,7 @@ pulsys@sandbox-tw8766 ~$ chown :pulibrary  22631-0.txt
 In order to logically organize under your home directory, Unix allows you to create subdirectories and put files in them. Let's look at the structure of your home directory.
 
 ```bash
-pulsys@sandbox-tw8766 ~$ tree
+tree
 ```
 
 The `tree` command will list contents of directories in a tree-like format. It is a recursive directory listing program that produces a depth indented listing of files. (If not available can be installed with the step below)
@@ -426,9 +426,9 @@ cd directoryname
 If no `directoryname` is specified your current directory becomes your home directory. The `directoryname` can be an absolute or relative path. A few examples are
 
 ```bash
-pulsys@sandbox-tw8766 ~$ cd
-pulsys@sandbox-tw8766 ~$ cd /usr/bin
-pulsys@sandbox-tw8766 ~$ cd ~/bin
+cd
+cd /usr/bin
+cd ~/bin
 ```
 
 In order the first command takes us to your home directory, the second one takes us to the `/usr/bin` directory and the last one takes us to the `bin` directory under your home. It could also be written as `cd /home/pulsys/bin`
@@ -443,8 +443,8 @@ Tab expansion is like autocomplete for the command prompt. Let’s say you
 have some files in a directory, as shown below:
 
 ```bash
-pulsys@sandbox-fkayiwa:~/command_line_curriculum$ cd /var/log
-pulsys@sandbox-fkayiwa:/var/log$ ls
+cd /var/log
+ls
 alternatives.log       dmesg          kern.log.4.gz  ubuntu-advantage.log             vmware-vgauthsvc.log.0
 alternatives.log.1     dmesg.0        lastlog        ubuntu-advantage.log.1           vmware-vmsvc.1.log
 alternatives.log.2.gz  dmesg.1.gz     mysql          ubuntu-advantage-timer.log       vmware-vmsvc.2.log
@@ -477,7 +477,7 @@ mkdir directoryname
 To make make a new `command_line_training` directory run the following command:
 
 ```bash
-pulsys@sandbox-tw8766 ~$ mkdir ~/command_line_training
+mkdir ~/command_line_training
 ```
 
 #### pwd: Print Working Directory
