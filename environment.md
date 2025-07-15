@@ -140,6 +140,7 @@ variable can be exported and assigned at the same time:
 ```zsh
 VAR_42='the answer to life the universe and everything'
 export VAR_42
+echo $VAR_42
 ```
 The quotes above will save you even when variable substitution is not needed. The variable $VAR_42 is now available to programs in the same shell session. If you log out of your virtual machine the variable will no longer be available. (Later we will visit how to make these variables always available)
 
